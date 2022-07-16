@@ -9,7 +9,7 @@ import './App.scss';
 let Home = () => {
     return (
         <div className="App">
-            <Sidebar />
+            
             <div className="containerApp">
                 <Form />
                 <Item />

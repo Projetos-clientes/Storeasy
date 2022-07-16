@@ -22,6 +22,7 @@ const Item = () => {
                     <Gallery />
                 </div>
                 <div className="mapa">
+                    
                     <h1>Veja este lugar no mapa</h1>
 
                     <img src={Mapa} alt="" className='maps' />
