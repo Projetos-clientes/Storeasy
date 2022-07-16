@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+.container-profile {
+    font-family: 'Montserrat', sans-serif;
+    .profile-content-top{
+        margin-top: 80px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        .content-top{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .top-img img{
+                width: 150px;
+                margin-right:20px;
+            }
+            .top-dados{
+                .dados-rating{
+                    margin-left: 25px;
+                }
+                .dados-name{
+                    h2{
+                        user-select: none;
+                        font-weight: 500;
+                        margin-top: 30px;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+        .content-main{
+            margin-top: 10px;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            .main-endereco{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                h3{
+                    font-weight: 600;
+                }
+                .inputsProfile{
+                    display: flex;
+                }
+            }            
+            .main-pagamento{
+                margin-top: 40px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                h3{
+                    font-weight: 600;
+                }
+            }
+            .buttonSalvar{
+                margin: 0 auto;
+                margin-bottom: 100px;
+            }
+        }
+    }
+}
+

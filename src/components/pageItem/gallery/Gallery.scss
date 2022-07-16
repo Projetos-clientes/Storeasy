@@ -1,0 +1,27 @@
+.gallery{
+    display: flex;
+    flex-direction: column;
+    .itemGrande{
+        width: 60%;
+        max-width: 600px;
+        .imgItemGrande{ 
+            border-radius: 2px;
+            width: 100vw;
+            height: 500px;
+        }
+    }  
+    .itensPequenos {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 54vh;
+        max-height: 300px;
+        .imgItensPequenos{
+            width: 170px;
+            border-radius: 8px;
+            height: 170px;
+        }
+    }   
+}

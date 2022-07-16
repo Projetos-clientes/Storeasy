@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+
+
+.cards {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    transition-duration: .2s;
+
+    .numbers {
+        padding: 5px;
+        border-radius: 5px;
+        color: #494949;
+        width: 50%;
+
+        input {
+            min-width: 80px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid violet;
+            color: #494949;
+        }
+    }
+
+}
+
+.container-login {
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    background: blueviolet;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 15px;
+
+    .login-bg {
+        height: calc(100% - 70px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .meuEspaco {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+
+            .textRadio input {
+                display: none;
+            }
+
+            .textRadio input+label:before {
+                content: '';
+                width: 16px;
+                height: 16px;
+                border: 1px solid #ccc;
+                border-radius: 50%;
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 8px;
+                margin-bottom: 3px;
+
+
+            }
+
+            .textRadio input:checked+label:before {
+                box-sizing: border-box;
+                border: none;
+                background-color: white;
+                border: 2px solid blueviolet;
+                padding: 7px;
+            }
+
+            .btn_prox {
+                width: 120px;
+                height: 45px;
+                background-color: blueviolet;
+                border-radius: 10px;
+                color: #fff;
+                font-size: 16px;
+                border: none;
+
+            }
+
+        }
+
+        .textChamativo {
+            font-size: 26px;
+            line-height: 5rem;
+            color: #fff;
+            font-weight: 'bold';
+
+        }
+
+        .login {
+            box-shadow: 0px 10px 27px -8px rgba(255, 255, 255, 0.62);
+            padding: 20px 30px;
+            border-radius: 5px;
+            background-color: #FFF;
+
+            h3 {
+                font-weight: 600;
+            }
+
+            p {
+                font-weight: 500;
+                margin: 4px 0 15px 0;
+            }
+
+            .login-externo {
+                display: flex;
+                justify-content: center;
+
+                img {
+                    cursor: pointer;
+                    user-select: none;
+                }
+
+                .bar {
+                    width: 2px;
+                    height: auto;
+                    margin: 15px 30px;
+                    background-color: #000;
+                }
+            }
+
+            .or {
+                display: flex;
+                justify-content: center;
+                font-weight: 400;
+                margin: 10px 0;
+                user-select: none;
+            }
+
+            .email-senha {
+                display: flex;
+                justify-content: center;
+            }
+
+            .passwordhelp {
+                margin-top: 15px;
+                display: flex;
+                justify-content: center;
+
+                a {
+                    color: black;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+
+                a:hover {
+                    color: rgb(97, 95, 95);
+                }
+            }
+
+            .buttonsLogin {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 20px;
+
+                #buttonLogin,
+                #buttonCadastrar {
+                    margin-bottom: 10px;
+                    background-color: #000;
+                }
+            }
+        }
+    }
+}

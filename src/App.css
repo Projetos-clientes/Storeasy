@@ -1,0 +1,9 @@
+.App {
+    margin: 0;
+    padding: 0;
+    height: 100vw;
+    width: 100%;
+}
+body {
+    font-size: 16em;
+}
