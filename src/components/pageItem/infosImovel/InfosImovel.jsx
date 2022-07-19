@@ -9,6 +9,7 @@ import detector from './detector.png';
 import extintor from './extintor.png';
 
 const Infos = () => {
+    console.log("Testando")
     return (
         <div className="container-infosImovel">
             <div className="infosImovel-title">
