@@ -29,7 +29,7 @@ const Sidebar = () => {
     return (
         <header className="Side">
             <div className="left">
-                <Link to="/">
+                <Link to={'/'}>
                     <img src={img} alt="logo da empresa" className="logo" />
                 </Link>
             </div>

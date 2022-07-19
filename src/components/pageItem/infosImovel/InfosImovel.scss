@@ -1,91 +1,60 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap');
 
 
-.container-infosImovel{
+.container-infosImovel {
     font-family: 'Lato', sans-serif;
-    padding-top: 60px;
-    margin-left: 30px;
-    .infosImovel-title{
-        h1{
-            
-            font-size: 22px;
-            border-bottom: 1px solid #494949;
-            width: 100px;
-            font-weight: 500;
-            font-family: 'Roboto', sans-serif;
-        }
+    margin: 30px 30px 0 30px;
 
-        
-        hr {
-            width: 100px;
-        }
-        h3{
-            font-size: 19px;
-            font-weight: 700;
-            margin: 10px 0px;
-          
-            
-        }
-        p{
-            font-family: 'Roboto', sans-serif;
-            font-size: 17px;
-            font-weight: 300;
-            width: 600px;
-            font-weight: 400;
-        }
+    hr {
+        width: 30%;
+    }
 
-        .met-categ{
-            width: 50%;
-            margin-left: 80px;
-            max-width: 350px;
+    h3 {
+        font-size: 17px;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+
+
+    p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        max-width: 600px;
+        font-weight: 300;
+    }
+
+    .infosImovel-title {
+        .met-categ {
             display: flex;
-            align-items: center;
-            justify-content: center;
 
-            .metcateg{
-                max-width: 230px;
+            .metcateg {
                 display: flex;
-                
                 flex-direction: column;
+                margin-right: 15px;
+                margin-top: 10px;
             }
-            
         }
     }
-    .infosImovel-local{
-        margin-top: 60px;
+
+    .infosImovel-local {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        hr {
-            margin-top: 5px;
-            width: 50px;
-        }
-        .local-infos {
-            p{
-
-                font-size: 18px;
-            }
-        }
     }
 
     .local-carac {
-        gap: 20px;
-        line-height: 2rem;
 
-        .caracter{
+        .caracter {
             display: flex;
             align-items: center;
             gap: 10px;
         }
-        hr {
-            width: 120px;
-        }
+
         img {
             width: 25px;
             height: 25px;
             object-fit: cover;
         }
     }
-    
+
 }

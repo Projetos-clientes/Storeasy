@@ -85,5 +85,18 @@
         }
 
     }
+}
 
+.galleria-de-fotos .mySwiper {
+    max-width: 900px;
+
+    .swiper-wrapper {
+        display: flex;
+        align-items: flex-start;
+    }
+}
+
+.galleria-de-fotos img {
+    width: 100%;
+    height: 200px;
 }

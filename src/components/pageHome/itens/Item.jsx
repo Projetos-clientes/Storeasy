@@ -1,8 +1,10 @@
 import React from 'react';
 import './Item.scss';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
+
 import armazem from '../img/armazem.png';
 import espaco from '../img/espaco.png';
 import quarto from '../img/quarto.png';

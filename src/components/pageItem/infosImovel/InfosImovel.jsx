@@ -12,129 +12,118 @@ const Infos = () => {
     return (
         <div className="container-infosImovel">
             <div className="infosImovel-title">
-                
-                <h3>Descrição do espaço</h3>
-                <hr />
-                <br />
-                <p>
-                   Espaço bem arejado e limpo constantemente, com todo cuidado possível com ventilação
-                   e segurança. lugar bem fechado e bem cuidado, Não aceito pets.
-                </p>
+                <div>
+                    <div style={{
+                        marginBottom: '5px',
+                        marginTop: '10px'
+                    }}>
+                        <h3>Descrição do espaço</h3>
+                        <hr />
+                    </div>
+                    <p>
+                        Espaço bem arejado e limpo constantemente, com todo cuidado possível com ventilação
+                        e segurança. lugar bem fechado e bem cuidado, aceito pets.
+                    </p>
+                </div>
 
-
-                    <br />
-                    <br />
-                    <br />
                 <div className="met-categ">
                     <div className="metcateg">
-                    <h3>Metragem quadrada</h3> 
-                <p>35mt²</p>
+                        <div style={{
+                            marginBottom: '5x',
+                            marginTop: '10px'
+                        }}>
+                            <h3>Metragem quadrada</h3>
+                            <hr />
+                        </div>
+                        <p>35mt²</p>
                     </div>
                     <div className="metcateg">
-
-                <h3>Categoria</h3> 
-                <p>Espaços pequenos</p>
+                        <div style={{
+                            marginBottom: '5px',
+                            marginTop: '10px'
+                        }}>
+                            <h3>Categoria</h3>
+                            <hr />
+                        </div>
+                        <p>Espaços pequenos</p>
+                    </div>
                 </div>
-                </div>
-                
-                
-               
             </div>
 
             <div className="infosImovel-local">
                 <div className="local-infos">
-                    <h3>Endereço</h3>
-                    <hr />
-                    <br />
+                    <div style={{
+                        marginBottom: '5px',
+                        marginTop: '10px'
+                    }}>
+                        <h3>Endereço</h3>
+                        <hr />
+                    </div>
+
                     <p>Rua: Juiz Nazário</p>
                     <p>Número: 3230</p>
                     <p>Bairro: Santa Tereza</p>
                     <p>Complemento: Apto 202</p>
                 </div>
-
-                
-                
             </div>
-            <br />
-            <br />
-
-            <br />
-            <br />
-
-
-            <br />
-            <br />
-
 
             <div className="local-carac">
+                <div style={{
+                    marginBottom: '5px',
+                    marginTop: '10px'
+                }}>
                     <h3>Características do local</h3>
                     <hr />
-                    <br />
-                    <div className='caracter'>
+                </div>
+
+                <div className='caracter'>
                     <img src={Pet} alt="" />
                     <p>Aceita Pets</p>
 
-                    </div>
-                    
-                    <div className='caracter'>
+                </div>
+
+                <div className='caracter'>
                     <img src={cobertura} alt="" />
                     <p>Local Fechado</p>
-                    
-                    </div>
+                </div>
 
-                    <div className='caracter'>
+                <div className='caracter'>
                     <img src={wifi} alt="" />
                     <p>Wifi liberado</p>
-                    
-                    </div>
 
-                    <div className='caracter'>
+                </div>
+
+                <div className='caracter'>
                     <img src={iluminacao} alt="" />
                     <p>Espaço iluminado</p>
-                    
-                    </div>
-
                 </div>
 
-                <br />
-            <br />
+            </div>
 
-
-            <br />
-            <br />
-
-
-                <div className="local-carac">
+            <div className="local-carac">
+                <div style={{
+                    marginBottom: '5px',
+                    marginTop: '10px'
+                }}>
                     <h3>Segurança do Local</h3>
                     <hr />
-                    <br />
-                    <div className='caracter'>
-                    <img src={Camera} alt="" />
-                    <p>Câmera de segurança</p>
-
-                    </div>
-                    
-                    <div className='caracter'>
-                    <img src={detector} alt="" />
-                    <p>Detector de fumaça</p>
-                    
-                    </div>
-
-                    <div className='caracter'>
-                    <img src={extintor} alt="" />
-                    <p>Extintor de incêncio</p>
-                    
-                    </div>
-
-                    
-
                 </div>
 
-                <br />
+                <div className='caracter'>
+                    <img src={Camera} alt="" />
+                    <p>Câmera de segurança</p>
+                </div>
 
+                <div className='caracter'>
+                    <img src={detector} alt="" />
+                    <p>Detector de fumaça</p>
+                </div>
 
-<br />
-<br />
+                <div className='caracter'>
+                    <img src={extintor} alt="" />
+                    <p>Extintor de incêncio</p>
+                </div>
+            </div>
         </div>
     );
 };

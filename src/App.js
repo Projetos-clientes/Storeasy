@@ -7,6 +7,7 @@ import Login from './pages/login/Login';
 import HomeProp from './pages/home-proprietario/Home-prop';
 import Espacos from './pages/espacos/Espacos';
 import Reservar from './pages/reservar/Reservar';
+import './App.css'
 
 function App() {
     return (

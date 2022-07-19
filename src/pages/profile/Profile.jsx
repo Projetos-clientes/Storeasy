@@ -17,7 +17,7 @@ const Profile = () => {
                     </div>
                     <div className="top-dados">
                         <div className="dados-rating">
-                            <RatingRead />
+                            <RatingRead only='true' />
                         </div>
                         <div className="dados-name">
                             <h2>Claudia Ferreira da Silva </h2>

@@ -9,7 +9,7 @@ import './App.scss';
 let Home = () => {
     return (
         <div className="App">
-            
+            <Sidebar />
             <div className="containerApp">
                 <Form />
                 <Item />
@@ -21,8 +21,6 @@ let Home = () => {
                 >
                     Reserve já um lar para seus pertences!
                 </h1>
-                <br />
-                <br />
                 <MyItens />
             </div>
         </div>

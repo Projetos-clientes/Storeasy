@@ -1,9 +1,11 @@
 .App {
     margin: 0;
     padding: 0;
-    height: 100vw;
-    width: 100%;
+}
+
+html {
+    overflow-x: hidden;
 }
 body {
-    font-size: 16em;
+    font-size: 16px;
 }

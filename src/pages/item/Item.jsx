@@ -21,15 +21,11 @@ const Item = () => {
                 <div className="item-conteudo-inicio">
                     <Gallery />
                 </div>
-                <div className="mapa">
-                    
+                {/* <div className="mapa">
                     <h1>Veja este lugar no mapa</h1>
-
                     <img src={Mapa} alt="" className='maps' />
+                </div> */}
 
-                </div>
-
-                <br />
             </main>
         </div>
     );

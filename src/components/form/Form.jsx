@@ -21,9 +21,9 @@ const Form = () => {
         >
             <InputBase
                 sx={{ ml: 1, flex: 1 }}
-                placeholder="Buscar Propriedades"
+                placeholder="Procurar cidade ou estado"
                 inputProps={{
-                    'aria-label': 'Buscar Propriedade',
+                    'aria-label': 'Procurar cidade',
                 }}
                 autoFocus
             />

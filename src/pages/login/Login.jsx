@@ -17,8 +17,6 @@ const Login = () => {
         <>
             <Sidebar />
             <div className="container-login">
-
-
                 <div className="login-bg">
                     <p className="textChamativo">
                         Qual categoria atende as suas necessidades de armazenamento?

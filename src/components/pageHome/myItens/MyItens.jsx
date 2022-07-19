@@ -3,6 +3,7 @@ import './MyItens.scss';
 import quartinho from '../img/quartinho.png';
 import { Link } from 'react-router-dom';
 import lares from './Itens';
+import ImgPropriedades from './PropriedadesFotos';
 
 const MyItens = () => {
     // fetch('Itens.js').then((r) => {
@@ -13,12 +14,9 @@ const MyItens = () => {
             <div className="container">
                 {lares.map((itemLar) => (
                     <div className="box-1" key={itemLar.id}>
-                        <img
-                            src={quartinho}
-                            alt="pequeno espaço"
-                            className="imageBox"
-                            draggable="false"
-                        />
+                        <>
+                            <ImgPropriedades className="imageBox" />
+                        </>
                         <div className="boxText">
                             <div className="boxTextCenter">
                                 <div className="divTexts">
