@@ -20,7 +20,7 @@ const Imovel = () => {
                         </div>
 
                         <div className='estrelas'>
-                            <RatingRead only={true} />
+                            <RatingRead only={true} fontSize={30} />
                         </div>
 
                         <p>Engenheiro civíl</p>

@@ -5,7 +5,9 @@ import Gallery from '../../components/pageItem/gallery/Gallery';
 import Imovel from '../../components/pageItem/dadosImovel/Imovel';
 import Infos from '../../components/pageItem/infosImovel/InfosImovel';
 import Mapa from '../../components/pageItem/imgs/maps.jpeg';
+
 import ChatUser from '../../chat/ChatUser';
+
 const Item = () => {
     return (
         <div className="Container--item">
@@ -21,10 +23,10 @@ const Item = () => {
                 <div className="item-conteudo-inicio">
                     <Gallery />
                 </div>
-                {/* <div className="mapa">
+                <div className="mapa">
                     <h1>Veja este lugar no mapa</h1>
                     <img src={Mapa} alt="" className='maps' />
-                </div> */}
+                </div>
 
             </main>
         </div>
