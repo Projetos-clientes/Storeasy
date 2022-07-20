@@ -9,7 +9,15 @@ import InputsMetodos from '../../components/inputsMetodos/InputsMetodos';
 const Profile = () => {
     return (
         <div className="container-profile">
-            <Sidebar />
+            <Sidebar
+                logo={true}
+                menu={true}
+                acesse={true}
+                tornese={true}
+                mensagem={true}
+                noti={true}
+                sair={true}
+                perfil={true} />
             <main className="profile-content-top">
                 <div className="content-top">
                     <div className="top-img">

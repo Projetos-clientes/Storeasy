@@ -41,11 +41,12 @@ const Imovel = () => {
                     <p>Taxa de serviço: R$4,00</p>
                 </div>
 
-                <div className="espaco">
-                    <Link to={'/reservar'} className="linkBlock">
+                <Link to={'/reservar'} className="linkBlock">
+                    <div className="espaco">
                         <button>Reservar espaço</button>
-                    </Link>
-                </div>
+                    </div>
+                </Link>
+
             </div>
         </div>
     );

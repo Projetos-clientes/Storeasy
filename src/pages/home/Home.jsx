@@ -9,7 +9,15 @@ import './App.scss';
 let Home = () => {
     return (
         <div className="App">
-            <Sidebar />
+            <Sidebar
+                logo={true}
+                menu={true}
+                acesse={true}
+                tornese={true}
+                mensagem={true}
+                noti={true}
+                sair={true}
+                perfil={true} />
             <div className="containerApp">
                 <Form />
                 <Item />

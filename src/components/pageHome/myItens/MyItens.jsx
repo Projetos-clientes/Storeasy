@@ -1,6 +1,5 @@
 import React from 'react';
 import './MyItens.scss';
-import quartinho from '../img/quartinho.png';
 import { Link } from 'react-router-dom';
 import lares from './Itens';
 import ImgPropriedades from './PropriedadesFotos';

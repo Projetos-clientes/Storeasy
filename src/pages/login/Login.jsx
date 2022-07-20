@@ -15,13 +15,16 @@ const Login = () => {
     let [metodo, setMetodo] = React.useState('login');
     return (
         <>
-            <Sidebar />
+            <Sidebar
+                logo={true}
+                menu={true}
+                acesse={true} />
             <div className="container-login">
                 <div className="login-bg">
                     <p className="textChamativo">
                         Qual categoria atende as suas necessidades de armazenamento?
                     </p>
-                    <p className="textChamativo">
+                    <p className="textChamativo1">
                         Encontre seu espaço perfeito para seus bens, bem perto de
                         você!
                     </p>

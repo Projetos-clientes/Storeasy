@@ -14,9 +14,9 @@ const MenuProps = {
         style: {
             maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
         },
-        
+
     },
-}; 
+};
 
 const names = [
     'Opção 1',

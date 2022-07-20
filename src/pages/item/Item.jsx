@@ -11,7 +11,15 @@ import ChatUser from '../../chat/ChatUser';
 const Item = () => {
     return (
         <div className="Container--item">
-            <Sidebar />
+            <Sidebar
+                logo={true}
+                menu={true}
+                acesse={true}
+                tornese={true}
+                mensagem={true}
+                noti={true}
+                sair={true}
+                perfil={true} />
 
             <main className="item-conteudo">
 
