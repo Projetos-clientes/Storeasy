@@ -18,6 +18,7 @@ let Home = () => {
                 noti={true}
                 sair={true}
                 perfil={true} />
+
             <div className="containerApp">
                 <Form />
                 <Item />

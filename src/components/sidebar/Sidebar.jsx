@@ -27,7 +27,9 @@ const Sidebar = ({
         return (
             <>
                 <div className="containerNotifc">
-                    {notification && <div className="notific"></div>}
+                    {notification &&
+                        <div className="notific">
+                        </div>}
                 </div>
             </>
         );

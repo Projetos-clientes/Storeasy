@@ -612,14 +612,12 @@ const HomeProp = () => {
     } */
 
     let [estadoHome, setEstadoHome] = React.useState(<Inicio />);
-
     return (
         <div className="container-home-prop">
             <Sidebar
                 logo={true}
                 menu={true}
                 acesse={true}
-                tornese={true}
                 mensagem={true}
                 noti={true}
                 sair={true}
@@ -667,7 +665,9 @@ const HomeProp = () => {
                         </div>
                     </div>
                 </div>
-                <main className="prop-content">{estadoHome}</main>
+                <main className="prop-content">
+                    {estadoHome}
+                </main>
             </div>
         </div>
     );
