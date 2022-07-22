@@ -180,8 +180,6 @@ const HomeProp = () => {
     };
 
     let ImgEspaco = () => {
-
-
         return (
             <>
                 <div className="imgContainer">
@@ -227,10 +225,7 @@ const HomeProp = () => {
             <div className="containerAcess">
 
                 <div className="textSelect">
-
                     <h3>Defina regras de acesso para o seu espaço</h3>
-
-
                 </div>
 
                 <CreatableSelect
@@ -243,7 +238,6 @@ const HomeProp = () => {
                 />
                 <Checkbox />
 
-
                 <Button
                     Text="Próximo"
                     variant="contained"
@@ -254,13 +248,9 @@ const HomeProp = () => {
         )
     }
 
-
-
     let CaracterLocal = () => {
 
         const animatedComponents = makeAnimated();
-
-
 
         const options = [
             { value: "Item01", label: "Local climatizado" },
@@ -623,6 +613,7 @@ const HomeProp = () => {
                 sair={true}
                 perfil={true} />
             <div className="prop-container">
+
                 <div className="prop-buttons" style={{ display: 'flex' }}>
                     <Link to="/">
                         <div className="prop-button">

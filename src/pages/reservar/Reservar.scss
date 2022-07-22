@@ -1,1 +1,91 @@
-.container-reserva {}
+.container-reserva {
+    .reserva {
+        display: flex;
+        justify-content: center;
+        max-width: 1070px;
+        padding: 25px;
+        font-family: leto;
+        flex-wrap: wrap;
+
+        .reserva-infos {
+            width: 100%;
+            max-width: 400px;
+
+            .reserva-voltar {
+                display: flex;
+                align-items: center;
+                margin-left: -15px;
+
+                .voltar-button {
+                    font-size: 55px;
+                    padding: 15px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    transition: 0.16s ease-in;
+                }
+
+                .voltar-button:hover {
+                    background-color: #f7f7f7;
+                }
+
+                h1 {
+                    margin-left: 10px;
+                    font-size: 32px;
+                    color: #222;
+                    font-weight: 500;
+                }
+            }
+
+            .infos-da-reserva {
+                padding-bottom: 20px;
+
+                h1 {
+                    font-size: 23px;
+                    margin-top: 0;
+                    text-align: left;
+                    color: #000;
+                    margin-bottom: 10px;
+                    font-weight: 500;
+                }
+
+                h2 {
+                    font-family: 'Lato';
+                    color: #000;
+                    font-weight: 500;
+                    font-size: 18px;
+                    margin-bottom: 5px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+
+            .reserva-pagamento {
+                border-top: 1px solid rgb(221, 221, 221);
+
+                h1 {
+                    font-size: 23px;
+                    text-align: left;
+                    color: #000;
+                    margin-top: 25px;
+                    margin-bottom: 10px;
+                    font-weight: 500;
+                }
+
+                .pagamentoCredito {}
+
+                .pagamentoCredito:nth-child(0) {
+                    width: 100%;
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        .reserva-card {
+            width: 100%;
+            max-width: 400px;
+            height: 500px;
+        }
+    }
+}

@@ -3,9 +3,8 @@ import './Profile.scss';
 import Sidebar from '../../components/sidebar/Sidebar';
 import perfilImg from '../../components/pageHome/img/pessoa-perfil.png';
 import RatingRead from '../../components/pageProfile/Rating';
+import MaskedInput from '../../components/Inputs/InputsNumber/MaskedInput';
 
-import InputsEndereco from '../../components/inputsEndereco/InputsEndereco';
-import InputsMetodos from '../../components/inputsMetodos/InputsMetodos';
 const Profile = () => {
     return (
         <div className="container-profile">
@@ -25,7 +24,7 @@ const Profile = () => {
                     </div>
                     <div className="top-dados">
                         <div className="dados-rating">
-                            <RatingRead only='true' />
+                            <RatingRead only="true" fontSize="40" />
                         </div>
                         <div className="dados-name">
                             <h2>Claudia Ferreira da Silva </h2>
@@ -33,7 +32,7 @@ const Profile = () => {
                     </div>
                 </div>
                 <div className="content-main">
-                    <InputsEndereco />
+                    <MaskedInput />
                 </div>
             </main>
         </div>

@@ -43,18 +43,18 @@ const ButtonAnimated = () => {
 
   return (
     <div className="wrapper">
-    <animated.div
-      style={{ ...rest, width: size, height: size }}
-      className="container"
-      onClick={() => set(open => !open)}>
-      {transition((style, item) => (
-        <animated.div
-          className="item"
-          style={{ ...style, background: item.css }}
-        />
-      ))}
-    </animated.div>
-  </div>
+      <animated.div
+        style={{ ...rest, width: size, height: size }}
+        className="container"
+        onClick={() => set(open => !open)}>
+        {transition((style, item) => (
+          <animated.div
+            className="item"
+            style={{ ...style, background: item.css }}
+          />
+        ))}
+      </animated.div>
+    </div>
   )
 }
 

@@ -2,65 +2,73 @@
 
 .container-profile {
     font-family: 'Montserrat', sans-serif;
-    .profile-content-top{
-        margin-top: 80px;
+
+    .profile-content-top {
+        margin-top: 50px;
         display: flex;
         justify-content: center;
         flex-direction: column;
-        .content-top{
+
+        .content-top {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             justify-content: center;
-            .top-img img{
+
+            .top-img img {
                 width: 150px;
-                margin-right:20px;
+                margin: 10px 20px;
             }
-            .top-dados{
-                .dados-rating{
-                    margin-left: 25px;
-                }
-                .dados-name{
-                    h2{
+
+            .top-dados {
+
+                .dados-name {
+                    h2 {
                         user-select: none;
                         font-weight: 500;
-                        margin-top: 30px;
-                        margin-left: 10px;
+                        margin-top: 15px;
                     }
                 }
             }
         }
-        .content-main{
+
+        .content-main {
             margin-top: 10px;
             flex-direction: column;
             display: flex;
             align-items: center;
-            .main-endereco{
+
+            .main-endereco {
                 display: flex;
                 align-items: center;
                 flex-direction: column;
                 justify-content: center;
-                h3{
+
+                h3 {
                     font-weight: 600;
                 }
-                .inputsProfile{
+
+                .inputsProfile {
                     display: flex;
                 }
-            }            
-            .main-pagamento{
+            }
+
+            .main-pagamento {
                 margin-top: 40px;
                 display: flex;
                 align-items: center;
                 flex-direction: column;
                 justify-content: center;
-                h3{
+
+                h3 {
                     font-weight: 600;
                 }
             }
-            .buttonSalvar{
+
+            .buttonSalvar {
                 margin: 0 auto;
                 margin-bottom: 100px;
             }
         }
     }
 }
-

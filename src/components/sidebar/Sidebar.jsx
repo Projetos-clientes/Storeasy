@@ -9,7 +9,6 @@ import { Divide as Hamburger } from 'hamburger-react';
 import ExitToAppTwoToneIcon from '@mui/icons-material/ExitToAppTwoTone';
 import CommentOutlinedIcon from '@mui/icons-material/CommentOutlined';
 import CircleNotificationsOutlinedIcon from '@mui/icons-material/CircleNotificationsOutlined';
-import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';
 
 const Sidebar = ({
     logo,
