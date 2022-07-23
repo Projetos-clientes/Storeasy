@@ -46,7 +46,13 @@ const Form = () => {
     const handleInputChange = (e) => {
         e.preventDefault();
         const { value } = e.target;
-        setData(lista)
+        console.log(value)
+        if (value) {
+            setData(lista)
+
+        } else {
+            setData("")
+        }
     }
     return (
         <div className="containerForm">
@@ -79,7 +85,9 @@ const Form = () => {
                     <SearchIcon />
                 </IconButton>
             </Paper>
+            {
 
+            }
             <SearchResults data={data} />
         </div>
     );
