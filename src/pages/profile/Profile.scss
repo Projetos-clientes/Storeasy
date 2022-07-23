@@ -4,10 +4,11 @@
     font-family: 'Montserrat', sans-serif;
 
     .profile-content-top {
-        margin-top: 50px;
+        margin-top: 40px;
         display: flex;
         justify-content: center;
         flex-direction: column;
+        padding: 10px;
 
         .content-top {
             display: flex;
@@ -21,7 +22,6 @@
             }
 
             .top-dados {
-
                 .dados-name {
                     h2 {
                         user-select: none;
@@ -33,41 +33,26 @@
         }
 
         .content-main {
+            width: 100vw;
             margin-top: 10px;
             flex-direction: column;
             display: flex;
             align-items: center;
+            margin-bottom: 60px;
 
-            .main-endereco {
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                justify-content: center;
-
-                h3 {
-                    font-weight: 600;
-                }
-
-                .inputsProfile {
-                    display: flex;
-                }
+            h1 {
+                font-size: 20px;
+                margin-bottom: 10px;
             }
 
-            .main-pagamento {
-                margin-top: 40px;
+            .informacoes-pessoais {
                 display: flex;
-                align-items: center;
                 flex-direction: column;
-                justify-content: center;
+                align-items: center;
 
-                h3 {
-                    font-weight: 600;
+                .mascaraInivisivel {
+                    opacity: 0;
                 }
-            }
-
-            .buttonSalvar {
-                margin: 0 auto;
-                margin-bottom: 100px;
             }
         }
     }

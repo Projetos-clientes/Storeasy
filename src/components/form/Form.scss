@@ -1,5 +1,30 @@
+.containerForm {
+    display: flex;
+    justify-content: center;
+}
+
 .form {
     margin: 0 auto;
     margin-top: 30px;
     max-width: 400px;
+
+    .inputForm {
+        border: none;
+        outline: none;
+        font-size: 18px;
+    }
+}
+
+.inputform:focus.search-results {
+    opacity: 1 !important;
+}
+
+.search-results {
+    opacity: 0;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 180px;
+    background-color: red;
+    z-index: 10001;
 }
