@@ -5,19 +5,48 @@ import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import './Form.scss';
+import SearchResults from './SearchResults';
 
 const Form = () => {
+
+    const lista = [
+        {
+            categoria: "Espaço pequeno",
+            Endereco: "Av.Dona Blabla",
+            Cidade: "Rio de Janeiro",
+            Estado: "RJ",
+            id: 1
+        }
+        ,
+        {
+            categoria: "Espaço Grande",
+            Endereco: "Av.Dona Blabla",
+            Cidade: "São Paulo",
+            Estado: "SP",
+            id: 2
+        },
+
+        {
+            categoria: "Espaço médio",
+            Endereco: "Av.Dona Blabla",
+            Cidade: "Belo Horizonte",
+            Estado: "MG",
+            id: 3
+        },
+
+        {
+            categoria: "Espaço Enrome",
+            Endereco: "Av.Dona Blabla",
+            Cidade: "Rio Branco",
+            Estado: "AC",
+            id: 4
+        }
+    ]
+    const [data, setData] = React.useState([]);
     const handleInputChange = (e) => {
         e.preventDefault();
         const { value } = e.target;
-        const url =
-            `https://servicodados.ibge.gov.br/api/v1/localidades/distritos?orderBy=${value}`
-        if (value) return;
-
-        fetch(url)
-            .then((r) => r.json())
-            .then(console.log)
-
+        setData(lista)
     }
     return (
         <div className="containerForm">
@@ -37,15 +66,6 @@ const Form = () => {
                     className='inputForm'
                     placeholder='Busque por cidade ou estado'
                     onChange={handleInputChange} />
-                {/* <InputBase
-                    sx={{ ml: 1, flex: 1 }}
-
-                    placeholder="Busque por cidade ou estado"
-                    inputProps={{
-                        'aria-label': 'Procurar cidade',
-                    }}
-                    autoFocus
-                /> */}
 
                 <Divider sx={{ height: 25, m: 0.7 }} orientation="vertical" />
                 <IconButton
@@ -60,14 +80,7 @@ const Form = () => {
                 </IconButton>
             </Paper>
 
-
-            <div className="search-results">
-                <ul>
-                    <li>mario</li>
-                    <li>mario2</li>
-                    <li>mario3</li>
-                </ul>
-            </div>
+            <SearchResults data={data} />
         </div>
     );
 };
