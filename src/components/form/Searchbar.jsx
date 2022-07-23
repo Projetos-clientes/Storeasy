@@ -22,15 +22,18 @@ const Searchbar = ({ data }) => {
         setFilterSearch(newFilter)
     }
 
+    // apagando os resultados 
     useEffect(() => {
         if (inputSearch === "") return setFilterSearch([])
     }, [inputSearch])
 
+    // definindo que não está focado
     const blurInputChange = () => {
         setBlurInput(true)
         setFilterSearch([])
     }
 
+    // definindo que está focado
     const focusInputChange = () => {
         setBlurInput(false)
         setFilterSearch([])
@@ -53,7 +56,7 @@ const Searchbar = ({ data }) => {
                     <input
                         type="text"
                         className='inputForm'
-                        placeholder='Pesquisar por cidade'
+                        placeholder='Buscar cidade ou estado'
                         value={inputSearch}
                         onChange={handleInputChange}
                         onBlur={blurInputChange}
