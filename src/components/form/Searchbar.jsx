@@ -1,23 +1,26 @@
-import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import './Form.scss';
-import { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Searchbar = ({ data }) => {
-    const [inputSearch, setInputSearch] = React.useState("")
-    const [filterSearch, setFilterSearch] = React.useState([])
+    const [inputSearch, setInputSearch] = useState("")
+    const [filterSearch, setFilterSearch] = useState([])
 
-    const [blurInput, setBlurInput] = React.useState(true)
+    const [focus, setFocus] = useState(true)
 
     const handleInputChange = (e) => {
         //atualizando oq está sendo escrito
         setInputSearch(e.target.value)
 
         //filtrando oq está sendo escrito
-        const newFilter = data.filter(i => i.Cidade.toLowerCase().includes(inputSearch.toLowerCase()))
+        const newFilter = data.filter((i) => {
+            return i.Cidade.toLowerCase().includes(inputSearch.toLowerCase()) ||
+                i.Estado.toLowerCase().includes(inputSearch.toLowerCase())
+        }
+        )
 
         setFilterSearch(newFilter)
     }
@@ -29,13 +32,12 @@ const Searchbar = ({ data }) => {
 
     // definindo que não está focado
     const blurInputChange = () => {
-        setBlurInput(true)
+        setFocus(false)
         setFilterSearch([])
     }
-
     // definindo que está focado
     const focusInputChange = () => {
-        setBlurInput(false)
+        setFocus(true)
         setFilterSearch([])
     }
 
@@ -59,8 +61,8 @@ const Searchbar = ({ data }) => {
                         placeholder='Buscar cidade ou estado'
                         value={inputSearch}
                         onChange={handleInputChange}
-                        onBlur={blurInputChange}
-                        onFocus={focusInputChange}
+                    // onBlur={blurInputChange}
+                    // onFocus={focusInputChange}
                     />
 
                     <Divider
@@ -69,24 +71,40 @@ const Searchbar = ({ data }) => {
                             m: 0.7
                         }}
                         orientation="vertical" />
+
                     <IconButton
                         sx={{
                             p: '8px',
                             color: '#fff',
                             backgroundColor: '#9C5BFF'
                         }}
-                        className=""
                         aria-label="search"
                     >
                         <SearchIcon />
                     </IconButton>
                 </Paper>
 
-                {filterSearch !== 0 &&
+                {filterSearch !== 0 && focus &&
                     <div className='dateResult'>
-                        {filterSearch.map(({ id, Cidade }) => (
-                            <div key={id} className='dataItem'>
-                                <p>{Cidade}</p>
+                        {filterSearch.map(({
+                            id,
+                            Cidade,
+                            Estado,
+                            img,
+                            categoria,
+                            Endereco }) => (
+                            <div div key={id} className='dataItem' >
+                                <div className='dataItem-img'>
+                                    <img
+                                        src={img}
+                                        alt="imagem propriedade" />
+                                </div>
+                                <div className='dataItem-info'>
+                                    <p style={{
+                                    }}>{categoria}</p>
+                                    <p>{Cidade} - {Estado}</p>
+                                    <p>{Endereco}</p>
+                                </div>
                             </div>
                         ))}
                     </div>
