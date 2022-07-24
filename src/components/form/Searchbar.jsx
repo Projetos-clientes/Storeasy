@@ -9,7 +9,7 @@ const Searchbar = ({ data }) => {
     const [inputSearch, setInputSearch] = useState("")
     const [filterSearch, setFilterSearch] = useState([])
 
-    const [focus, setFocus] = useState(true)
+    const [focus, setFocus] = useState(false)
 
     const handleInputChange = (e) => {
         //atualizando oq está sendo escrito
@@ -61,8 +61,8 @@ const Searchbar = ({ data }) => {
                         placeholder='Buscar cidade ou estado'
                         value={inputSearch}
                         onChange={handleInputChange}
-                    // onBlur={blurInputChange}
-                    // onFocus={focusInputChange}
+                        onBlur={blurInputChange}
+                        onFocus={focusInputChange}
                     />
 
                     <Divider
