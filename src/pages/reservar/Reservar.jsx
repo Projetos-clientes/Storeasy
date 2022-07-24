@@ -1,24 +1,46 @@
 import React, { useState } from 'react'
+
+//elemento importado
 import Sidebar from '../../components/sidebar/Sidebar';
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+
+//elementos lib
 import CreditCardIcon from '@mui/icons-material/CreditCard';
-import './Reservar.scss';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+
+//seta lib
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+
+//css
+import './Reservar.scss';
+
+//img para teste
+import garagem from '../../components/pageItem/imgs/garagem.jpg';
+
+//Mascaras
 import MascaraCartaoCredito from '../../components/Inputs/InputsNumber/MascaraCartaoCredito';
 import MascaraValidadeCartao from '../../components/Inputs/InputsNumber/MascaraValidadeCartao';
 import MascaraCVVCartao from '../../components/Inputs/InputsNumber/MascaraCVVCartao';
+import MascaraNomeReserva from '../../components/Inputs/InputsReserva/MascaraNomeReserva';
+import MascaraCPFReserva from '../../components/Inputs/InputsReserva/MascaraCPFReserva';
 
 const Reservar = () => {
-    const [pagamento, setAge] = React.useState('');
+    //escolha da forma de pagamento
+    const [pagamento, setPagamento] = React.useState('CartãoCredito');
 
+    //infos cartão
     const [cartaoCredito, setCartaoCredito] = React.useState("");
     const [validadeCartao, setValidadeCartao] = React.useState("");
     const [cvvCartao, setCvvCartao] = React.useState("");
 
+    //infos titular
+    const [nomeReserva, setNomeReserva] = React.useState("");
+    const [cpfReserva, setCpfReserva] = React.useState("");
+
     const handleChange = (event) => {
-        setAge(event.target.value);
+        setPagamento(event.target.value);
+        console.log(event.target.value)
     };
 
     return (
@@ -36,13 +58,14 @@ const Reservar = () => {
                 <div className="reserva-infos">
                     <div className="reserva-voltar">
                         <ArrowBackIosNewIcon className="voltar-button" />
-                        <h1>Voltar</h1>
+                        <h1>Fazer a reserva</h1>
                     </div>
                     <div className='infos-da-reserva'>
                         <h1>Sua reserva</h1>
                         <div>
                             <h2>Data</h2>
-                            <p>01/05/2022 - 23/05/2022.</p>
+                            <p>01/05/2022 - 23/05/2022
+                            </p>
                         </div>
                     </div>
                     <div className='reserva-pagamento'>
@@ -89,12 +112,48 @@ const Reservar = () => {
                                         value={cvvCartao}
                                         onChange={e => setCvvCartao(e.target.value)} />
                                 </div>
+                                <h2>Informações do titular do cartão</h2>
+                                <div className="pagamentoCredito-Nome">
+                                    <MascaraNomeReserva
+                                        value={nomeReserva}
+                                        onChange={e => setNomeReserva(e.target.value)} />
+
+                                    <MascaraCPFReserva
+                                        value={cpfReserva}
+                                        onChange={e => setCpfReserva(e.target.value)} />
+
+                                </div>
                             </div>
                         }
-
                     </div>
                 </div>
                 <div className='reserva-card'>
+                    <div className='reserva-card-img'>
+                        <img src={garagem} alt="" />
+                        <div>
+                            <span>Espaço pequeno</span>
+                            <p>Garagem pequena</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div className="reserva-card-infos">
+                        <h2>Informações de valores</h2>
+                        <div className='card-infos-valor'>
+                            <span>R$ 320,00 x 20 dias</span>
+                            <span>R$ 6.400,00</span>
+                        </div>
+                        <div className='card-infos-taxa'>
+                            <span>Taxa de serviço</span>
+                            <span>R$ 30,00</span>
+                        </div>
+                        <hr />
+                        <div className='card-infos-total'>
+                            <span>Total</span>
+                            <span>R$ 6.430,00</span>
+                        </div>
+                    </div>
+                    <button class="btn-reservar">Reservar
+                    </button>
                 </div>
             </div>
         </div>

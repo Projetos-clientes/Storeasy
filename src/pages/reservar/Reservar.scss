@@ -6,6 +6,7 @@
         padding: 25px;
         font-family: leto;
         flex-wrap: wrap;
+        gap: 50px;
 
         .reserva-infos {
             width: 100%;
@@ -87,16 +88,164 @@
                         display: flex;
                         margin-bottom: 10px;
                     }
+
+                    h2 {
+                        margin-top: 20px;
+                        font-size: 20px;
+                        font-family: "lato", sans-serif;
+                        font-weight: 500;
+                    }
+
+                    .pagamentoCredito-Nome {
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    .pagamentoCredito-Nome>label {
+                        margin: 10px 0;
+                    }
                 }
-
-
             }
         }
 
         .reserva-card {
-            width: 100%;
-            max-width: 400px;
-            height: 500px;
+            width: 45%;
+            max-height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: rgb(34, 34, 34);
+            border-radius: 12px;
+            border: 1px solid rgb(221, 221, 221);
+            padding: 25px;
+            font-family: "lato", sans-serif;
+
+            hr {
+                width: 100%;
+                border: 0;
+                height: 1px;
+                background-color: rgba(0, 0, 0, 0.24);
+                margin: 15px auto;
+            }
+
+            .reserva-card-img {
+                display: flex;
+
+                img {
+                    margin-right: 10px;
+                    border-radius: 7px;
+                    width: 125px;
+                }
+
+                span {
+                    font-size: 12px;
+                }
+
+                p {
+                    margin-top: 2px;
+                    text-transform: uppercase;
+                }
+            }
+
+            .reserva-card-infos {
+                h2 {
+                    margin-top: 15px;
+                    font-size: 25px;
+                    font-weight: 500;
+                    margin-bottom: 15px;
+                }
+
+                .card-infos-valor {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 15px;
+                }
+
+                .card-infos-taxa {
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                .card-infos-taxa>span {
+                    text-decoration: underline;
+                }
+            }
+
+            .card-infos-total {
+                display: flex;
+                font-weight: 600;
+                justify-content: space-between;
+            }
+
+            .btn-reservar {
+                position: relative;
+                margin: 0;
+                padding: 17px 35px;
+                outline: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                text-transform: uppercase;
+                background-color: #fff;
+                border: 1px solid rgba(22, 76, 167, 0.6);
+                border-radius: 12px;
+                overflow: hidden;
+                transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+                margin-top: 25px;
+                color: #164ca7;
+                font-size: 14px;
+                font-weight: 500;
+                letter-spacing: 0.7px;
+            }
+
+            .button:before {
+                content: "";
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%) scaleY(1) scaleX(1.25);
+                top: 100%;
+                width: 140%;
+                height: 180%;
+                background-color: rgba(0, 0, 0, 0.05);
+                border-radius: 50%;
+                display: block;
+                transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+                z-index: -1;
+            }
+
+            .button:after {
+                content: "";
+                position: absolute;
+                left: 55%;
+                transform: translateX(-50%) scaleY(1) scaleX(1.45);
+                top: 180%;
+                width: 160%;
+                height: 190%;
+                background-color: #39bda7;
+                border-radius: 50%;
+                display: block;
+                transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+                z-index: -1;
+            }
+
+            .button:hover {
+                color: #ffffff;
+                border: 1px solid #39bda7;
+            }
+
+            .button:hover:before {
+                top: -35%;
+                background-color: #39bda7;
+                transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+            }
+
+            .button:hover:after {
+                top: -45%;
+                background-color: #39bda7;
+                transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+            }
+
         }
     }
 }

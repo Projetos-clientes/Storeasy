@@ -26,7 +26,7 @@ const MascaraCPF = ({ value, onChange }) => {
             <label
                 class="form__label"
                 for="CPF">
-                CPF do titular
+                CPF
             </label>
         </div>
     )
