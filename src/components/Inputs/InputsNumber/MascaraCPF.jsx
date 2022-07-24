@@ -14,7 +14,6 @@ const MascaraCPF = ({ value, onChange }) => {
             }
         })
     }
-
     return (
         <div class="form__group field">
             <InputMask
