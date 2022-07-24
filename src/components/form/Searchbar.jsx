@@ -4,6 +4,7 @@ import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import './Form.scss';
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Searchbar = ({ data }) => {
     const [inputSearch, setInputSearch] = useState("")
@@ -86,26 +87,21 @@ const Searchbar = ({ data }) => {
 
                 {filterSearch !== 0 && focus &&
                     <div className='dateResult'>
-                        {filterSearch.map(({
-                            id,
-                            Cidade,
-                            Estado,
-                            img,
-                            categoria,
-                            Endereco }) => (
-                            <div div key={id} className='dataItem' >
-                                <div className='dataItem-img'>
-                                    <img
-                                        src={img}
-                                        alt="imagem propriedade" />
+                        {filterSearch.map(({ id, Cidade, Estado, img, categoria, Endereco }) => (
+                            <Link to={'/item'} key={id}>
+                                <div className='dataItem' >
+                                    <div className='dataItem-img'>
+                                        <img
+                                            src={img}
+                                            alt="imagem propriedade" />
+                                    </div>
+                                    <div className='dataItem-info'>
+                                        <p>{categoria}</p>
+                                        <p>{Cidade} - {Estado}</p>
+                                        <p>{Endereco}</p>
+                                    </div>
                                 </div>
-                                <div className='dataItem-info'>
-                                    <p style={{
-                                    }}>{categoria}</p>
-                                    <p>{Cidade} - {Estado}</p>
-                                    <p>{Endereco}</p>
-                                </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 }
