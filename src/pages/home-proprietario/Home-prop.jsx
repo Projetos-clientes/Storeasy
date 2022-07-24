@@ -18,6 +18,15 @@ import Checkbox from '../../components/Checkbox/Checkbox';
 import ImgPropriedades from '../../components/pageHome/myItens/PropriedadesFotos';
 import ButtonSpace from '../../components/pageHome/buttonSpace/ButtonSpace';
 
+//mascaras
+import MascaraCEP from '../../components/Inputs/InputsNumber/MascaraCEP';
+import MascaraCasa from '../../components/Inputs/InputsNumber/MascaraCasa';
+import MascaraBairro from '../../components/Inputs/InputsText/MascaraBairro';
+import MascaraRua from '../../components/Inputs/InputsText/MascaraRua';
+import MascaraComplemento from '../../components/Inputs/InputsText/MascaraComplemento';
+import MascaraCidade from '../../components/Inputs/InputsText/MascaraCidade';
+import MascaraUf from '../../components/Inputs/InputsText/MascaraUf';
+
 //css
 import './Home-prop.scss';
 import '../../components/pageHome/myItens/MyItens.scss'
@@ -34,13 +43,7 @@ import Create from 'react-select';
 import { ActionMeta, OnChangeValue } from 'react-select';
 import makeAnimated from 'react-select/animated';
 import CreatableSelect from 'react-select/creatable';
-import MascaraCEP from '../../components/Inputs/InputsNumber/MascaraCEP';
-import MascaraCasa from '../../components/Inputs/InputsNumber/MascaraCasa';
-import MascaraBairro from '../../components/Inputs/InputsText/MascaraBairro';
-import MascaraRua from '../../components/Inputs/InputsText/MascaraRua';
-import MascaraComplemento from '../../components/Inputs/InputsText/MascaraComplemento';
-import MascaraCidade from '../../components/Inputs/InputsText/MascaraCidade';
-import MascaraUf from '../../components/Inputs/InputsText/MascaraUf';
+
 
 const HomeProp = () => {
     let [timeStart, setTimeStart] = React.useState('00:00');
