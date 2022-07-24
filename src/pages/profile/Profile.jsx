@@ -1,6 +1,6 @@
 import React from 'react';
 import './Profile.scss';
-import Sidebar from '../../components/sidebar/Sidebar';
+import NavBar from '../../components/navbar/NavBar';
 import perfilImg from '../../components/pageHome/img/pessoa-perfil.png';
 import RatingRead from '../../components/pageProfile/Rating';
 
@@ -33,7 +33,7 @@ const Profile = () => {
 
     return (
         <div className="container-profile">
-            <Sidebar
+            <NavBar
                 logo={true}
                 menu={true}
                 acesse={true}
@@ -69,7 +69,9 @@ const Profile = () => {
                         <div style={{
                             display: 'flex',
                             flexWrap: 'wrap',
-                            maxWidth: '700px'
+                            margin: '0 auto',
+                            justifyContent: 'center'
+
                         }}>
                             <MascaraNome
                                 value={nome}
@@ -86,14 +88,15 @@ const Profile = () => {
                                 onChange={(e) => (
                                     setCpf(e.target.value)
                                 )} />
-                            <MascaraInvisivel />
                         </div>
 
-                        <h1 style={{ marginTop: '-30px' }}>Endereço completo</h1>
+                        <h1>Endereço completo</h1>
                         <div style={{
                             display: 'flex',
                             flexWrap: 'wrap',
-                            maxWidth: '700px'
+                            maxWidth: '700px',
+                            margin: '0 auto',
+                            justifyContent: 'center'
                         }}>
                             <MascaraCEP
                                 value={cep}

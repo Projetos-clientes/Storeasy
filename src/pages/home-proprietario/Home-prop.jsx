@@ -1,36 +1,46 @@
 import React, { useState } from 'react';
-import Sidebar from '../../components/sidebar/Sidebar';
-import './Home-prop.scss';
-import Home from './home.png';
-import Caixa from './box.png';
-import Ticket from './ticket.png';
-import Espacos from './storage.png';
 import { Link } from 'react-router-dom';
-import garagem from './garagem.jpg';
+
+//imgs
+import Home from './imgs/home.png';
+import Caixa from './imgs/box.png';
+import Ticket from './imgs/ticket.png';
+import Espacos from './imgs/storage.png';
+import garagem from './imgs/garagem.jpg';
+import Upload from "./imgs/icone-upload.png";
+
+//componentes importados
+import NavBar from '../../components/navbar/NavBar';
 import Galeria from '../../components/pageHomeProp/galleryAdd/Gallery.jsx';
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
-
 import InputCat from './InputCat';
-import InputsLocal from '../../components/pageHomeProp/inputsLocal/InputsLocal';
+import lares from '../../components/pageHome/myItens/Itens';
+import Checkbox from '../../components/Checkbox/Checkbox';
+import ImgPropriedades from '../../components/pageHome/myItens/PropriedadesFotos';
+import ButtonSpace from '../../components/pageHome/buttonSpace/ButtonSpace';
 
+//css
+import './Home-prop.scss';
+import '../../components/pageHome/myItens/MyItens.scss'
+
+// componentes importados de libs
 import 'react-modern-calendar-datepicker/lib/DatePicker.css';
 import { Calendar } from 'react-modern-calendar-datepicker';
-import 'react-modern-calendar-datepicker/lib/DatePicker.css';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
 import Creatable, { useCreatable } from 'react-select/creatable';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
-import Upload from "./icone-upload.png";
-import ButtonSpace from '../../components/pageHome/buttonSpace/ButtonSpace';
 import Create from 'react-select';
 import { ActionMeta, OnChangeValue } from 'react-select';
 import makeAnimated from 'react-select/animated';
-
 import CreatableSelect from 'react-select/creatable';
-import Checkbox from '../../components/Checkbox/Checkbox';
-import ImgPropriedades from '../../components/pageHome/myItens/PropriedadesFotos';
-import '../../components/pageHome/myItens/MyItens.scss'
-import lares from '../../components/pageHome/myItens/Itens';
+import MascaraCEP from '../../components/Inputs/InputsNumber/MascaraCEP';
+import MascaraCasa from '../../components/Inputs/InputsNumber/MascaraCasa';
+import MascaraBairro from '../../components/Inputs/InputsText/MascaraBairro';
+import MascaraRua from '../../components/Inputs/InputsText/MascaraRua';
+import MascaraComplemento from '../../components/Inputs/InputsText/MascaraComplemento';
+import MascaraCidade from '../../components/Inputs/InputsText/MascaraCidade';
+import MascaraUf from '../../components/Inputs/InputsText/MascaraUf';
 
 const HomeProp = () => {
     let [timeStart, setTimeStart] = React.useState('00:00');
@@ -117,15 +127,11 @@ const HomeProp = () => {
         return (
             <div className="content-espaco">
                 <h1 className="blog-title">Adicionar espaço</h1>
-
                 <br />
                 <div
                     className="espaco-itens"
                     style={{ display: 'flex', justifyContent: 'center' }}
                 >
-                    {/* <Galeria /> */}
-
-
                     <Box
                         component="form"
                         style={{
@@ -136,8 +142,6 @@ const HomeProp = () => {
                         sx={{
                             '& > :not(style)': { m: 1, width: '280px' },
                         }}
-                        noValidate
-                        autoComplete="on"
                     >
                         <TextField
                             id="filled-basic"
@@ -152,16 +156,47 @@ const HomeProp = () => {
                             defaultValue=""
                             variant="filled"
                         />
-                        <label style={{ fontSize: '20px', color: '#494949', }}>Metragem quadrada</label>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
 
-                            <input style={{ fontSize: '20px', color: '#494949', padding: '5px', borderRadius: '5px', width: '75px', borderColor: '#494949' }} type={"number"} />
-
-                            <p>X </p>
-
-                            <input style={{ fontSize: '20px', color: '#494949', padding: '5px', borderRadius: '5px', width: '75px', borderColor: '#494949' }} type={"number"} />
+                        <div style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            gap: '10px'
+                        }}>
+                            <label
+                                style={{
+                                    fontSize: '20px',
+                                    color: '#494949',
+                                }}>
+                                Metragem quadrada
+                            </label>
+                            <div style={{
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                gap: '10px'
+                            }}>
+                                <input style={{
+                                    fontSize: '20px',
+                                    color: '#494949',
+                                    padding: '5px',
+                                    borderRadius: '5px',
+                                    width: '75px',
+                                    borderColor: '#494949'
+                                }}
+                                    type={"number"} />
+                                <p> X </p>
+                                <input style={{
+                                    fontSize: '20px',
+                                    color: '#494949',
+                                    padding: '5px',
+                                    borderRadius: '5px',
+                                    width: '75px',
+                                    borderColor: '#494949'
+                                }}
+                                    type={"number"} />
+                            </div>
                         </div>
-
                     </Box>
                 </div>
 
@@ -185,16 +220,13 @@ const HomeProp = () => {
                 <div className="imgContainer">
                     <div className="textImg">
                         <h3>Imagens do seu espaço</h3>
-                        <p>As imagens do seu espaço são obrigatórias! Elas seram responsáveis por seu cliente
-                            ter a visualização do espaço que está alugando.
-                        </p>
+                        <p>As imagens do seu espaço são obrigatórias! Elas serão responsáveis pelo seu cliente ter a visualização do espaço que está alugando.</p>
                     </div>
 
                     <img className="imgUp" src={Upload} alt="upload de imagens" />
 
                     <Button
                         variant="contained"
-
                     >
                         Subir imagem
                     </Button>
@@ -208,7 +240,6 @@ const HomeProp = () => {
 
                 </div>
             </>
-
         );
     }
 
@@ -249,7 +280,6 @@ const HomeProp = () => {
     }
 
     let CaracterLocal = () => {
-
         const animatedComponents = makeAnimated();
 
         const options = [
@@ -272,10 +302,7 @@ const HomeProp = () => {
                 <div className="textSelect">
 
                     <h3>Escolha as caracteristicas de segurança</h3>
-                    <p>As caracteristicas podem determinar o sucesso do seu local!
-
-
-                    </p>
+                    <p>As caracteristicas podem determinar o sucesso do seu local!</p>
                 </div>
 
                 <CreatableSelect
@@ -286,9 +313,6 @@ const HomeProp = () => {
                     options={options}
 
                 />
-
-
-
 
                 <Button
                     Text="Próximo"
@@ -334,36 +358,70 @@ const HomeProp = () => {
 
                 <h3>Este espaço é de propriedade sua ou de terceiros?</h3>
 
-
-
                 <div className="textRadio">
                     <input type="radio" id="radio1" name="question" value="0" />
                     <label htmlFor="radio1">Meu espaço</label>
                 </div>
-
 
                 <div className="textRadio">
                     <input type="radio" id="radio2" name="question" value="1" />
                     <label htmlFor="radio2">De outra pessoa</label>
                 </div>
 
-
                 <Button
                     Text="Próximo"
                     variant="contained"
                     onClick={() => setEstadoHome(<InputAddLocal />)}
-                > Próximo </Button>
+                >
+                    Próximo
+                </Button>
 
             </div>
         )
     }
 
     let InputAddLocal = () => {
+        const [cepEnd, setCepEnd] = React.useState("");
+        const [casaEnd, setCasaEnd] = React.useState("");
+        const [bairroEnd, setBairroEnd] = React.useState("");
+        const [ruaEnd, setRuaEnd] = React.useState("");
+        const [complementoEnd, setComplementoEnd] = React.useState("");
+        const [cidadeEnd, setCidadeEnd] = React.useState("");
+        const [ufEnd, setUfEnd] = React.useState("");
+
         return (
             <>
                 <h3>Endereço do local</h3>
                 <div className="espacoLocal">
-                    <InputsLocal />
+                    <div>
+                        <MascaraCEP
+                            value={cepEnd}
+                            onChange={e => setCepEnd(e.target.value)} />
+
+                        <MascaraCasa
+                            value={casaEnd}
+                            onChange={e => setCasaEnd(e.target.value)} />
+
+                        <MascaraBairro
+                            value={bairroEnd}
+                            onChange={e => setBairroEnd(e.target.value)} />
+
+                        <MascaraRua
+                            value={ruaEnd}
+                            onChange={e => setRuaEnd(e.target.value)} />
+
+                        <MascaraComplemento
+                            value={complementoEnd}
+                            onChange={e => setComplementoEnd(e.target.value)} />
+
+                        <MascaraCidade
+                            value={cidadeEnd}
+                            onChange={e => setCidadeEnd(e.target.value)} />
+
+                        <MascaraUf
+                            value={ufEnd}
+                            onChange={e => setUfEnd(e.target.value)} />
+                    </div>
                     <div
                         style={{
                             display: 'flex',
@@ -459,16 +517,41 @@ const HomeProp = () => {
         }
 
         return (
-            <div style={{ display: 'flex', flexDirection: 'column', textAlign: 'center' }}>
+            <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                textAlign: 'center'
+            }}>
 
                 <h1> Qual valor será cobrado pelo seu espaço?</h1>
+                <input
+                    type="number"
+                    style={{
+                        padding: '20px',
+                        borderRadius: '5px',
+                        color: '#000',
+                        borderWidth: '1px',
+                        borderColor: '#1b1b1b',
+                        fontSize: '20px',
+                    }}
+                    placeholder='Digite o valor do espaço'
+                    className='value' />
 
-                <input type="number" style={{ padding: '20px', borderRadius: '5px', color: '#ccc', borderWidth: '1px', borderColor: '#1b1b1b', fontSize: '20px', }} placeholder='digite o valor do espaço' className='value' />
+                <button
+                    onClick={handleAlterar}
+                    style={{
+                        padding: '10px',
+                        marginTop: '20px',
+                        color: '#fff',
+                        fontWeight: 'bold',
+                        backgroundColor: 'blueviolet',
+                        border: 'none',
+                        borderRadius: '10px',
+                        fontSize: '18px',
+                        cursor: 'pointer'
+                    }}>Calcular valor</button>
 
-                &nbsp; &nbsp; &nbsp;<button onClick={handleAlterar} style={{ padding: '10px', color: '#fff', fontWeight: 'bold', backgroundColor: 'blueviolet', border: 'none', borderRadius: '10px', fontSize: '18px', cursor: 'pointer' }}>Calcular valor</button>
-
-                <h3>Taxa da Storeasy:   &nbsp;  &nbsp;  &nbsp;  &nbsp;  {valor} </h3>
-
+                <h1 style={{ fontWeight: '500' }}>Taxa da Storeasy: {valor} </h1>
                 <Button onClick={() => setEstadoHome(<ValorPublic />)}>Públicar</Button>
 
             </div>
@@ -528,7 +611,6 @@ const HomeProp = () => {
                 <div className="espaco-itens">IMAGEM</div>
                 <h3>Endereço do local</h3>
                 <div className="espaco-itens">
-                    <InputsLocal />
                 </div>
                 <h3>Disponibilidade</h3>
                 <div className="espaco-itens">
@@ -604,7 +686,7 @@ const HomeProp = () => {
     let [estadoHome, setEstadoHome] = React.useState(<Inicio />);
     return (
         <div className="container-home-prop">
-            <Sidebar
+            <NavBar
                 logo={true}
                 menu={true}
                 acesse={true}

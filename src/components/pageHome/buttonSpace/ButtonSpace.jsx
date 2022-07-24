@@ -1,7 +1,7 @@
-import React from 'react'; 
+import React from 'react';
 import "./ButtonSpace.scss";
 
-const ButtonSpace = ({Text, onClick}) => {
+const ButtonSpace = ({ Text, onClick }) => {
   return (
     <div className='btnContainer'>
       <button className='btn' onClick={onClick}>{Text}</button>
@@ -9,4 +9,4 @@ const ButtonSpace = ({Text, onClick}) => {
   )
 }
 
-export default  ButtonSpace
+export default ButtonSpace

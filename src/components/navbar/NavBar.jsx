@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Sidebar.scss';
+import './NavBar.scss';
 import img from '../pageHome/img/logo-storeasy.png';
 
 import person from '../pageHome/img/pessoa-perfil.png';
@@ -57,7 +57,43 @@ const Sidebar = ({
                     <Hamburger toggled={isOpen} toggle={setOpen} duration={0.8} />
                     {isOpen && (
                         <div className="modalHamburguer">
-                            <div>MODAL</div>
+                            {isLoggedIn &&
+                                <nav className='modalNav'>
+                                    <ul className="navList">
+                                        {tornese &&
+                                            <li>
+                                                <Link to="/home">
+                                                    Seja um anfitrião
+                                                </Link>
+                                            </li>
+
+                                        }
+                                        {mensagem &&
+                                            <li>
+                                                Mensagens
+                                            </li>
+                                        }
+                                        {noti &&
+                                            <li onClick={handlenotification}>
+                                                Notificações
+                                            </li>
+                                        }
+
+                                        {sair &&
+                                            <li>
+                                                Sair
+                                            </li>
+                                        }
+                                        {perfil &&
+                                            <li>
+                                                <Link to="/profile">
+                                                    Perfil
+                                                </Link>
+                                            </li>
+                                        }
+                                    </ul>
+                                </nav>
+                            }
                         </div>
                     )}
                 </div>
@@ -73,15 +109,8 @@ const Sidebar = ({
                 }
 
                 <ul className="lista">
-
-                    {
-                        /* 
-                            barra de opções se estiver logado
-                        */
-                    }
                     {isLoggedIn &&
                         <div className="optionsBar">
-
                             {tornese &&
                                 <Link to="/home">
                                     {/* <div className="enterHome">
@@ -95,7 +124,6 @@ const Sidebar = ({
                                             <div class="btn-txt">Seja um anfitrião</div>
                                         </button>
                                     </li>
-
                                 </Link>
                             }
 
@@ -103,9 +131,7 @@ const Sidebar = ({
                             {mensagem &&
                                 <li className="item">
                                     <CommentOutlinedIcon
-                                        className='item-Icon'
-
-                                    />
+                                        className='item-Icon' />
                                 </li>
                             }
                             {noti &&
@@ -143,7 +169,7 @@ const Sidebar = ({
                     }
                 </ul>
             </nav>
-        </header>
+        </header >
     );
 };
 

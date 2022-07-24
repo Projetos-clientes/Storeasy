@@ -25,16 +25,58 @@
 
     }
 
-    .modalHamburguer {
-        position: absolute;
-        top: 71px;
-        padding: 10px 5px 10px 13px;
-        right: 0px;
-        width: 100vw;
-        background-color: rgba(0, 0, 0, 0.548);
-        z-index: 999;
-        color: #fff;
+    .menuHamburguer {
+        .modalHamburguer {
+            position: absolute;
+            top: 71px;
+            padding: 10px 5px 10px 13px;
+            right: 0px;
+            width: 100%;
+            background-color: #01282e;
+            z-index: 999;
+            color: #fff;
+
+            .modalNav {
+                display: flex;
+                justify-content: center;
+
+                ul {
+                    width: 100%;
+
+                    li {
+                        list-style-type: none;
+                        text-align: center;
+                        width: 100%;
+                        cursor: pointer;
+                        padding-bottom: 5px;
+                        border-bottom: 2px solid rgba(121, 117, 117, 0.13);
+                        margin-bottom: 20px;
+
+                        a {
+                            text-decoration: none;
+                        }
+
+                        a:visited {
+                            color: #FFF;
+                        }
+                    }
+                }
+
+                ul>li {
+                    margin-top: 20px;
+                }
+
+            }
+
+
+
+
+
+
+        }
     }
+
+
 
     .middle {
         display: flex;

@@ -2,12 +2,12 @@ import React from 'react';
 import './Espaços.scss';
 import { Link } from 'react-router-dom';
 import quartinho from '../../components/pageHome/img/quartinho.png';
-import Sidebar from '../../components/sidebar/Sidebar';
+import NavBar from '../../components/navbar/NavBar';
 
 const Espacos = () => {
     return (
         <div className="ItemContainer">
-            <Sidebar />
+            <NavBar />
             <h1>Espaços alugados</h1>
             <ul className="ListItem">
                 <li>

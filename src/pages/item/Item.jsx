@@ -1,6 +1,6 @@
 import React from 'react';
 import './Item.scss';
-import Sidebar from '../../components/sidebar/Sidebar';
+import NavBar from '../../components/navbar/NavBar';
 import Gallery from '../../components/pageItem/gallery/Gallery';
 import Imovel from '../../components/pageItem/dadosImovel/Imovel';
 import Infos from '../../components/pageItem/infosImovel/InfosImovel';
@@ -11,7 +11,7 @@ import ChatUser from '../../chat/ChatUser';
 const Item = () => {
     return (
         <div className="Container--item">
-            <Sidebar
+            <NavBar
                 logo={true}
                 menu={true}
                 acesse={true}

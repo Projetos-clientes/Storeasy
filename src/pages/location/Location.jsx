@@ -1,7 +1,7 @@
 import React from 'react';
 import InputsMetodos from '../../components/pageLocation/inputsMetodos/InputsMetodos';
 import Calendario from '../../components/pageLocation/calendar/Calendario';
-import Sidebar from '../../components/sidebar/Sidebar';
+import NavBar from '../../components/navbar/NavBar';
 import './Location.scss';
 import { Button } from '@mui/material';
 import Todo from '../../components/pageLocation/todoApp/TodoLis';
@@ -12,7 +12,7 @@ const Location = () => {
 
     return (
         <div className="container-location">
-            <Sidebar />
+            <NavBar />
             <section className="time-location">
                 <h1>Por quanto tempo deseja alugar?</h1>
                 <div className="times">

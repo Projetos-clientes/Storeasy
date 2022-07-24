@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 //elemento importado
-import Sidebar from '../../components/sidebar/Sidebar';
+import NavBar from '../../components/navbar/NavBar';
 
 //elementos lib
 import CreditCardIcon from '@mui/icons-material/CreditCard';
@@ -45,7 +45,7 @@ const Reservar = () => {
 
     return (
         <div className="container-reserva">
-            <Sidebar
+            <NavBar
                 logo={true}
                 menu={true}
                 acesse={true}

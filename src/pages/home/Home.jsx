@@ -1,7 +1,8 @@
 import Form from '../../components/form/Form';
 import Item from '../../components/pageHome/itens/Item';
 import MyItens from '../../components/pageHome/myItens/MyItens';
-import Sidebar from '../../components/sidebar/Sidebar';
+import NavBar from '../../components/navbar/NavBar';
+
 import './Home.css';
 import './Animation.css';
 import './App.scss';
@@ -9,7 +10,7 @@ import './App.scss';
 let Home = () => {
     return (
         <div className="App">
-            <Sidebar
+            <NavBar
                 logo={true}
                 menu={true}
                 acesse={true}

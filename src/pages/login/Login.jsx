@@ -1,5 +1,5 @@
 import React from 'react';
-import Sidebar from '../../components/sidebar/Sidebar';
+import NavBar from '../../components/navbar/NavBar';
 import './Login.scss';
 import facebook from '../../assets/login/facebook.png';
 import gmail from '../../assets/login/gmail.png';
@@ -15,7 +15,7 @@ const Login = () => {
     let [metodo, setMetodo] = React.useState('login');
     return (
         <>
-            <Sidebar
+            <NavBar
                 logo={true}
                 menu={true}
                 acesse={true} />
