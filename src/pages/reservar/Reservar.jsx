@@ -6,14 +6,21 @@ import './Reservar.scss';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
+import MascaraCartaoCredito from '../../components/Inputs/InputsNumber/MascaraCartaoCredito';
+import MascaraValidadeCartao from '../../components/Inputs/InputsNumber/MascaraValidadeCartao';
+import MascaraCVVCartao from '../../components/Inputs/InputsNumber/MascaraCVVCartao';
+
 const Reservar = () => {
     const [pagamento, setAge] = React.useState('');
+
+    const [cartaoCredito, setCartaoCredito] = React.useState("");
+    const [validadeCartao, setValidadeCartao] = React.useState("");
+    const [cvvCartao, setCvvCartao] = React.useState("");
 
     const handleChange = (event) => {
         setAge(event.target.value);
     };
+
     return (
         <div className="container-reserva">
             <Sidebar
@@ -39,7 +46,7 @@ const Reservar = () => {
                         </div>
                     </div>
                     <div className='reserva-pagamento'>
-                        <h1>Forma de pagamento</h1>
+                        <h1>Método de pagamento</h1>
                         <FormControl
                             style={{
                                 width: '100%',
@@ -48,34 +55,49 @@ const Reservar = () => {
                             <Select
                                 value={pagamento}
                                 onChange={handleChange}
-                                displayEmpty
-                                inputProps={{ 'aria-label': 'Forma de pagamento' }}
-                                placeholder={"forma de pagamento"}
+                                inputProps={{
+                                    'aria-label': 'Forma de pagamento'
+                                }}
+                                placeholder="forma de pagamento"
+                                className='optionCartaoCredito'
+
                             >
-                                <MenuItem disabled>
+                                <MenuItem
+                                    disabled className='optionCartaoCredito'>
                                     <em>Forma de pagamento</em>
                                 </MenuItem>
                                 <MenuItem
-                                    value="CartãoCredito"
-                                    style={{
-                                        display: "flex",
-                                        alignItems: "center"
-                                    }}>
-                                    <CreditCardIcon /> Cartão de Crédito</MenuItem>
+                                    className='optionCartaoCredito'
+                                    value="CartãoCredito">
+                                    <CreditCardIcon style={{ marginRight: '5px' }} /> Cartão de Crédito</MenuItem>
                             </Select>
                         </FormControl>
                         {
                             pagamento === "CartãoCredito" &&
                             <div className='pagamentoCredito'>
-                                <TextField label="Filled success" variant="filled" color="success" focused />
+                                <div className='pagamentoCredito-cartao'>
+                                    <MascaraCartaoCredito
+                                        value={cartaoCredito}
+                                        onChange={e => setCartaoCredito(e.target.value)} />
+                                </div>
+
+                                <div style={{ display: 'flex', gap: '10px' }}>
+                                    <MascaraValidadeCartao
+                                        value={validadeCartao}
+                                        onChange={e => setValidadeCartao(e.target.value)} />
+                                    <MascaraCVVCartao
+                                        value={cvvCartao}
+                                        onChange={e => setCvvCartao(e.target.value)} />
+                                </div>
                             </div>
                         }
+
                     </div>
                 </div>
                 <div className='reserva-card'>
                 </div>
             </div>
-        </div >
+        </div>
     )
 }
 export default Reservar

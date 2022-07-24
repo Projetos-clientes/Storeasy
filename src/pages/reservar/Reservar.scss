@@ -73,12 +73,23 @@
                     font-weight: 500;
                 }
 
-                .pagamentoCredito {}
-
-                .pagamentoCredito:nth-child(0) {
-                    width: 100%;
-                    margin-left: 10px;
+                .optionCartaoCredito>div {
+                    display: flex;
+                    align-items: center;
                 }
+
+                .pagamentoCredito {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+
+                    .pagamentoCredito-cartao {
+                        display: flex;
+                        margin-bottom: 10px;
+                    }
+                }
+
+
             }
         }
 

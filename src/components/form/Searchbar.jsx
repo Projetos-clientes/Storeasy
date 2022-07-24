@@ -10,7 +10,6 @@ const Searchbar = ({ data }) => {
     const [inputSearch, setInputSearch] = useState("")
     const [filterSearch, setFilterSearch] = useState([])
 
-    const [focus, setFocus] = useState(false)
 
     const handleInputChange = (e) => {
         //atualizando oq está sendo escrito
@@ -31,16 +30,6 @@ const Searchbar = ({ data }) => {
         if (inputSearch === "") return setFilterSearch([])
     }, [inputSearch])
 
-    // definindo que não está focado
-    const blurInputChange = () => {
-        setFocus(false)
-        setFilterSearch([])
-    }
-    // definindo que está focado
-    const focusInputChange = () => {
-        setFocus(true)
-        setFilterSearch([])
-    }
 
     return (
         <>
@@ -62,8 +51,7 @@ const Searchbar = ({ data }) => {
                         placeholder='Buscar cidade ou estado'
                         value={inputSearch}
                         onChange={handleInputChange}
-                        onBlur={blurInputChange}
-                        onFocus={focusInputChange}
+
                     />
 
                     <Divider
@@ -85,7 +73,7 @@ const Searchbar = ({ data }) => {
                     </IconButton>
                 </Paper>
 
-                {filterSearch !== 0 && focus &&
+                {filterSearch !== 0 &&
                     <div className='dateResult'>
                         {filterSearch.map(({ id, Cidade, Estado, img, categoria, Endereco }) => (
                             <Link to={'/item'} key={id}>
@@ -103,11 +91,9 @@ const Searchbar = ({ data }) => {
                                 </div>
                             </Link>
                         ))}
-                    </div>
-                }
+                    </div>}
             </div>
         </>
-
     );
 };
 
