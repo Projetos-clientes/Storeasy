@@ -1,11 +1,13 @@
 .container-reserva {
     .reserva {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
+        align-items: flex-end;
         max-width: 1070px;
         padding: 25px;
+        margin: 0 auto;
         font-family: leto;
-        flex-wrap: wrap;
+        flex-wrap: wrap-reverse;
         gap: 50px;
 
         .reserva-infos {
@@ -109,15 +111,16 @@
         }
 
         .reserva-card {
-            width: 45%;
-            max-height: 450px;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            flex-wrap: wrap;
             color: rgb(34, 34, 34);
+            margin-top: 40px;
             border-radius: 12px;
             border: 1px solid rgb(221, 221, 221);
             padding: 25px;
+            max-height: 450px;
             font-family: "lato", sans-serif;
 
             hr {
