@@ -20,8 +20,6 @@ const Sidebar = ({
     sair,
     perfil }) => {
     const [notification, setNotification] = useState(false);
-
-
     function Notif({ notification }) {
         return (
             <>
@@ -33,13 +31,16 @@ const Sidebar = ({
             </>
         );
     }
+
     function handlenotification() {
         setNotification(!notification);
     }
 
-    const [isOpen, setOpen] = useState(false); //abrir/fehcar-menu-hamburguer
+    const [isOpen, setOpen] = useState(false);
+    //abrir/fehcar-menu-hamburguer
 
-    const [isLoggedIn, setLoggedIn] = useState(true) //mudar barra de navegação
+    const [isLoggedIn, setLoggedIn] = useState(true);
+    //mudar barra de navegação
 
     return (
         <header className="Side">
