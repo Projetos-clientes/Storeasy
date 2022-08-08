@@ -16,7 +16,7 @@ const MascaraCVVCartao = ({ value, onChange }) => {
     }
 
     return (
-        <label class="inp" for="cvvCartaoReserva">
+        <label class="inp" htmlFor="cvvCartaoReserva">
             <InputMask
                 id="cvvCartaoReserva"
                 mask="999"

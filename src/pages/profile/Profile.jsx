@@ -14,7 +14,6 @@ import MascaraRua from '../../components/Inputs/InputsText/MascaraRua';
 import MascaraComplemento from '../../components/Inputs/InputsText/MascaraComplemento';
 import MascaraCidade from '../../components/Inputs/InputsText/MascaraCidade';
 import MascaraUf from '../../components/Inputs/InputsText/MascaraUf';
-import MascaraInvisivel from '../../components/Inputs/MascaraInvisivel';
 
 const Profile = () => {
     //infos pessoais
@@ -50,7 +49,9 @@ const Profile = () => {
                     </div>
                     <div className="top-dados">
                         <div className="dados-rating">
-                            <RatingRead only="true" fontSize="40" />
+                            <RatingRead 
+                            only={true} 
+                            fontSize="40" />
                         </div>
                         <div className="dados-name">
                             <h2>Claudia Ferreira da Silva </h2>

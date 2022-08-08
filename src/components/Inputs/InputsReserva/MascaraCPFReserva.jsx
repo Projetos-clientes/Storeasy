@@ -15,7 +15,7 @@ const MascaraCPFReserva = ({ value, onChange }) => {
         })
     }
     return (
-        <label class="inp" for="cpfReserva">
+        <label class="inp" htmlFor="cpfReserva">
             <InputMask
                 id="cpfReserva"
                 mask="999.999.999-99"

@@ -15,7 +15,7 @@ const MascaraNomeReserva = ({ value, onChange }) => {
         })
     }
     return (
-        <label class="inp" for="nomeReserva">
+        <label class="inp" htmlFor="nomeReserva">
             <InputMask
                 id="nomeReserva"
                 placeholder=" "

@@ -13,7 +13,7 @@ const MascaraRua = ({ value, onChange }) => {
                 onChange={onChange} />
             <label
                 class="form__label"
-                for="Rua">
+                htmlFor="Rua">
                 Rua
             </label>
         </div>

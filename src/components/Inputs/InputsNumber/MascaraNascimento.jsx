@@ -14,7 +14,7 @@ const MascaraNascimento = ({ value, onChange }) => {
                 onChange={onChange} />
             <label
                 class="form__label"
-                for="Data de Nascimento">
+                htmlFor="Data de Nascimento">
                 Data de Nascimento
             </label>
         </div>

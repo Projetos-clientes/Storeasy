@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 //elemento importado
 import NavBar from '../../components/navbar/NavBar';
@@ -42,7 +42,6 @@ const Reservar = () => {
         setPagamento(event.target.value);
         console.log(event.target.value)
     };
-
     return (
         <div className="container-reserva">
             <NavBar

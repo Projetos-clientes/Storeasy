@@ -13,7 +13,7 @@ const MascaraBairro = ({ value, onChange }) => {
                 onChange={onChange} />
             <label
                 class="form__label"
-                for="bairro">
+                htmlFor="bairro">
                 Bairro
             </label>
         </div>

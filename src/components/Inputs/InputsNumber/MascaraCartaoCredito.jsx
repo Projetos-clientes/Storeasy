@@ -16,7 +16,7 @@ const MascaraCartaoCredito = ({ value, onChange }) => {
     }
 
     return (
-        <label class="inp" for="cartaoCreditoReserva">
+        <label class="inp" htmlFor="cartaoCreditoReserva">
             <InputMask
                 id="cartaoCreditoReserva"
                 mask="9999 9999 9999 9999"

@@ -25,7 +25,7 @@ const MascaraCPF = ({ value, onChange }) => {
                 onChange={handleChange} />
             <label
                 class="form__label"
-                for="CPF">
+                htmlFor="CPF">
                 CPF
             </label>
         </div>

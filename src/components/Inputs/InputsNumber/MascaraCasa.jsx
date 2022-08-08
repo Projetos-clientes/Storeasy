@@ -25,7 +25,7 @@ const MascaraCasa = ({ value, onChange }) => {
                 onChange={handleChange} />
             <label
                 class="form__label"
-                for="Casa">
+                htmlFor="Casa">
                 Casa
             </label>
         </div>

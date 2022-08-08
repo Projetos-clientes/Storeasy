@@ -26,7 +26,7 @@ const MascaraCEP = ({ value, onChange }) => {
                 onChange={handleChange} />
             <label
                 class="form__label"
-                for="CEP">
+                htmlFor="CEP">
                 CEP
             </label>
         </div>

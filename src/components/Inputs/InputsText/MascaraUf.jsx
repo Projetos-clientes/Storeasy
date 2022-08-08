@@ -25,7 +25,7 @@ const MascaraUf = ({ value, onChange }) => {
                 onChange={handleChange} />
             <label
                 class="form__label"
-                for="UF">
+                htmlFor="UF">
                 UF
             </label>
         </div>

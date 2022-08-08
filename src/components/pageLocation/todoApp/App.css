@@ -1,7 +1,7 @@
 .todo-app {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   width: 536px;
   max-height: 400px;
   text-align: center;
