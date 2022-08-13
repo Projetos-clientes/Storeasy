@@ -24,6 +24,14 @@ import MascaraValidadeCartao from '../../components/Inputs/InputsNumber/MascaraV
 import MascaraCVVCartao from '../../components/Inputs/InputsNumber/MascaraCVVCartao';
 import MascaraNomeReserva from '../../components/Inputs/InputsReserva/MascaraNomeReserva';
 import MascaraCPFReserva from '../../components/Inputs/InputsReserva/MascaraCPFReserva';
+import MascaraNumeroReserva from '../../components/Inputs/InputsReserva/MascaraNumeroReserva'; 
+import MascaraCEPReserva from '../../components/Inputs/InputsReserva/MascaraCEPReserva';
+import MascaraCasaReserva from '../../components/Inputs/InputsReserva/MascaraCasaReserva';
+import MascaraBairroReserva from '../../components/Inputs/InputsReserva/MascaraBairroReserva'; 
+import MascaraRuaReserva from '../../components/Inputs/InputsReserva/MascaraRuaReserva';
+import MascaraComplementoReserva from '../../components/Inputs/InputsReserva/MascaraComplementoReserva';
+import MascaraCidadeReserva from '../../components/Inputs/InputsReserva/MascaraCidadeReserva'; 
+import MascaraUFReserva from '../../components/Inputs/InputsReserva/MascaraUFReserva';
 
 const Reservar = () => {
     //escolha da forma de pagamento
@@ -37,11 +45,20 @@ const Reservar = () => {
     //infos titular
     const [nomeReserva, setNomeReserva] = React.useState("");
     const [cpfReserva, setCpfReserva] = React.useState("");
+    const [numeroReserva, setNumeroReserva] = React.useState("");
+
+    const [cep, setCep] = React.useState("");
+    const [casa, setCasa] = React.useState("");
+    const [bairro, setBairro] = React.useState("")
+    const [rua, setRua] = React.useState("")
+    const [complemento, setComplemento] = React.useState("")
+    const [cidade, setCidade] = React.useState("")
+    const [uf, setUf] = React.useState("")
 
     const handleChange = (event) => {
         setPagamento(event.target.value);
-        console.log(event.target.value)
     };
+
     return (
         <div className="container-reserva">
             <NavBar
@@ -63,7 +80,9 @@ const Reservar = () => {
                         <h1>Sua reserva</h1>
                         <div>
                             <h2>Data</h2>
-                            <p>01/05/2022 - 23/05/2022
+                            <p>
+                                01/05/2022 - 23/05/2022.
+                                <span>Editar</span>
                             </p>
                         </div>
                     </div>
@@ -91,7 +110,19 @@ const Reservar = () => {
                                 <MenuItem
                                     className='optionCartaoCredito'
                                     value="CartãoCredito">
-                                    <CreditCardIcon style={{ marginRight: '5px' }} /> Cartão de Crédito</MenuItem>
+                                    <CreditCardIcon 
+                                        style={{ marginRight: '5px' }} 
+                                    /> 
+                                    Cartão de Crédito
+                                </MenuItem>
+                                <MenuItem
+                                    className='optionCartaoDebito'
+                                    value="CartãoDebito">
+                                    <CreditCardIcon
+                                        style={{ marginRight: '5px' }}
+                                    />
+                                    Cartão de Debito
+                                </MenuItem>
                             </Select>
                         </FormControl>
                         {
@@ -102,7 +133,6 @@ const Reservar = () => {
                                         value={cartaoCredito}
                                         onChange={e => setCartaoCredito(e.target.value)} />
                                 </div>
-
                                 <div style={{ display: 'flex', gap: '10px' }}>
                                     <MascaraValidadeCartao
                                         value={validadeCartao}
@@ -116,11 +146,35 @@ const Reservar = () => {
                                     <MascaraNomeReserva
                                         value={nomeReserva}
                                         onChange={e => setNomeReserva(e.target.value)} />
-
                                     <MascaraCPFReserva
                                         value={cpfReserva}
                                         onChange={e => setCpfReserva(e.target.value)} />
+                                    <MascaraNumeroReserva 
+                                        value={numeroReserva}
+                                        onChange={e => setNumeroReserva(e.target.value)} />
 
+                                    {/* DECLARANDO ENDEREÇO */}
+                                    <MascaraCEPReserva 
+                                        value={cep}
+                                        onChange={e => setCep(e.target.value)} />
+                                    <MascaraCasaReserva
+                                        value={casa}
+                                        onChange={e => setCasa(e.target.value)} />
+                                    <MascaraBairroReserva 
+                                        value={bairro}
+                                        onChange={e => setBairro(e.target.value)} />
+                                    <MascaraRuaReserva
+                                        value={rua}
+                                        onChange={e => setRua(e.target.value)} />
+                                    <MascaraComplementoReserva
+                                        value={complemento}
+                                        onChange={e => setComplemento(e.target.value)} />
+                                    <MascaraCidadeReserva
+                                        value={cidade}
+                                        onChange={e => setCidade(e.target.value)} />
+                                    <MascaraUFReserva
+                                        value={uf}
+                                        onChange={e => setUf(e.target.value)} />
                                 </div>
                             </div>
                         }

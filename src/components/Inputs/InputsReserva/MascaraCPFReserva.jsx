@@ -19,7 +19,7 @@ const MascaraCPFReserva = ({ value, onChange }) => {
             <InputMask
                 id="cpfReserva"
                 mask="999.999.999-99"
-                placeholder='___.___.___-__'
+                placeholder='123.123.123-12'
                 value={value}
                 onChange={handleChange} />
             <span class="label">CPF do titular</span>

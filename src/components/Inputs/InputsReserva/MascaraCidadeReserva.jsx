@@ -2,31 +2,26 @@ import React from 'react'
 import InputMask from 'react-input-mask'
 import '../InputsMascara.scss'
 
-const onlyNumber = (str) => str.replace(/[^0-9]/g, '')
-
-const MascaraCVVCartao = ({ value, onChange }) => {
+const MascaraCidadeReserva = ({ value, onChange }) => {
     function handleChange(e) {
         onChange({
             ...e,
             target: {
                 ...e.target,
-                value: onlyNumber(e.target.value)
             }
         })
     }
-
     return (
-        <label class="inp" htmlFor="cvvCartaoReserva">
+        <label class="inp" htmlFor="cidadeReserva">
             <InputMask
-                id="cvvCartaoReserva"
-                mask="9999"
-                placeholder='1234'
+                id="cidadeReserva"
+                placeholder="São Paulo"
                 value={value}
                 onChange={handleChange} />
-            <span class="label">CVV</span>
+            <span class="label">Cidade</span>
             <span class="focus-bg"></span>
         </label>
     )
 }
 
-export default MascaraCVVCartao;
+export default MascaraCidadeReserva;

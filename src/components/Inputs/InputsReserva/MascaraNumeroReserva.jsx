@@ -4,7 +4,7 @@ import '../InputsMascara.scss'
 
 const onlyNumber = (str) => str.replace(/[^0-9]/g, '')
 
-const MascaraCVVCartao = ({ value, onChange }) => {
+const MascaraNumeroReserva = ({ value, onChange }) => {
     function handleChange(e) {
         onChange({
             ...e,
@@ -14,19 +14,18 @@ const MascaraCVVCartao = ({ value, onChange }) => {
             }
         })
     }
-
     return (
-        <label class="inp" htmlFor="cvvCartaoReserva">
+        <label class="inp" htmlFor="numeroReserva">
             <InputMask
-                id="cvvCartaoReserva"
-                mask="9999"
-                placeholder='1234'
+                id="numeroReserva"
+                mask="(99) 9 9999-9999"
+                placeholder='(00) 1 2345-6789'
                 value={value}
                 onChange={handleChange} />
-            <span class="label">CVV</span>
+            <span class="label">Número do titular</span>
             <span class="focus-bg"></span>
         </label>
     )
 }
 
-export default MascaraCVVCartao;
+export default MascaraNumeroReserva;
