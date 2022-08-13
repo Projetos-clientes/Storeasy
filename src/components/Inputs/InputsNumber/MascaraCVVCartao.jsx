@@ -16,15 +16,15 @@ const MascaraCVVCartao = ({ value, onChange }) => {
     }
 
     return (
-        <label class="inp" htmlFor="cvvCartaoReserva">
+        <label className="inp" htmlFor="cvvCartaoReserva">
             <InputMask
                 id="cvvCartaoReserva"
                 mask="9999"
                 placeholder='1234'
                 value={value}
                 onChange={handleChange} />
-            <span class="label">CVV</span>
-            <span class="focus-bg"></span>
+            <span className="label">CVV</span>
+            <span className="focus-bg"></span>
         </label>
     )
 }

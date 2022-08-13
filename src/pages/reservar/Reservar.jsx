@@ -1,5 +1,8 @@
 import React from 'react'
 
+// imposrtando lib de validação dos campos
+import validator from 'validator';
+
 //elemento importado
 import NavBar from '../../components/navbar/NavBar';
 
@@ -47,6 +50,7 @@ const Reservar = () => {
     const [cpfReserva, setCpfReserva] = React.useState("");
     const [numeroReserva, setNumeroReserva] = React.useState("");
 
+    //infos endereço
     const [cep, setCep] = React.useState("");
     const [casa, setCasa] = React.useState("");
     const [bairro, setBairro] = React.useState("")
@@ -58,6 +62,14 @@ const Reservar = () => {
     const handleChange = (event) => {
         setPagamento(event.target.value);
     };
+
+    const reservarLocal = () => {
+        if (validator.isCreditCard(cartaoCredito)){
+            console.log('COMPRA APROVADA')
+        } else{
+            console.log('COMPRA REPROVADA')
+        }
+    }
 
     return (
         <div className="container-reserva">
@@ -205,7 +217,8 @@ const Reservar = () => {
                             <span>R$ 6.430,00</span>
                         </div>
                     </div>
-                    <button class="btn-reservar">Reservar
+                    <button className="btn-reservar" onClick={reservarLocal}>
+                        Reservar
                     </button>
                 </div>
             </div>

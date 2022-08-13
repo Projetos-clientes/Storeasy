@@ -12,14 +12,14 @@ const MascaraComplementoReserva = ({ value, onChange }) => {
         })
     }
     return (
-        <label class="inp" htmlFor="complementoReserva">
+        <label className="inp" htmlFor="complementoReserva">
             <InputMask
                 id="complementoReserva"
                 placeholder="Casa 1"
                 value={value}
                 onChange={handleChange} />
-            <span class="label">Complemento</span>
-            <span class="focus-bg"></span>
+            <span className="label">Complemento</span>
+            <span className="focus-bg"></span>
         </label>
     )
 }

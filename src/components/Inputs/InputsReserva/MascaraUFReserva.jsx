@@ -12,14 +12,14 @@ const MascaraUFReserva = ({ value, onChange }) => {
         })
     }
     return (
-        <label class="inp" htmlFor="ufReserva">
+        <label className="inp" htmlFor="ufReserva">
             <InputMask
                 id="ufReserva"
                 placeholder="RJ"
                 value={value}
                 onChange={handleChange} />
-            <span class="label">UF (Sigla Estado)</span>
-            <span class="focus-bg"></span>
+            <span className="label">UF (Sigla Estado)</span>
+            <span className="focus-bg"></span>
         </label>
     )
 }

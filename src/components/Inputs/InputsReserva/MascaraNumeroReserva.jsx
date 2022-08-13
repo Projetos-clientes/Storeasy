@@ -15,15 +15,15 @@ const MascaraNumeroReserva = ({ value, onChange }) => {
         })
     }
     return (
-        <label class="inp" htmlFor="numeroReserva">
+        <label className="inp" htmlFor="numeroReserva">
             <InputMask
                 id="numeroReserva"
                 mask="(99) 9 9999-9999"
                 placeholder='(00) 1 2345-6789'
                 value={value}
                 onChange={handleChange} />
-            <span class="label">Número do titular</span>
-            <span class="focus-bg"></span>
+            <span className="label">Número do titular</span>
+            <span className="focus-bg"></span>
         </label>
     )
 }

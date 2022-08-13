@@ -15,15 +15,15 @@ const MascaraCEPReserva = ({ value, onChange }) => {
         })
     }
     return (
-        <label class="inp" htmlFor="cepReserva">
+        <label className="inp" htmlFor="cepReserva">
             <InputMask
                 id="cepReserva"
                 mask="99999-999"
                 placeholder='12346-789'
                 value={value}
                 onChange={handleChange} />
-            <span class="label">CEP</span>
-            <span class="focus-bg"></span>
+            <span className="label">CEP</span>
+            <span className="focus-bg"></span>
         </label>
     )
 }

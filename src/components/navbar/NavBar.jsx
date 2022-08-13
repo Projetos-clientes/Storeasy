@@ -120,9 +120,9 @@ const Sidebar = ({
                                         </button>
                                     </div> */}
                                     <li className='item'>
-                                        <button class="icon-btn add-btn">
-                                            <div class="add-icon"></div>
-                                            <div class="btn-txt">Seja um anfitrião</div>
+                                        <button className="icon-btn add-btn">
+                                            <div className="add-icon"></div>
+                                            <div className="btn-txt">Seja um anfitrião</div>
                                         </button>
                                     </li>
                                 </Link>
@@ -150,7 +150,6 @@ const Sidebar = ({
                                 <li className="item">
                                     <ExitToAppTwoToneIcon
                                         className='item-Icon'
-
                                     />
                                 </li>
                             }

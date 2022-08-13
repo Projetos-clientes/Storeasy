@@ -16,15 +16,15 @@ const MascaraCartaoCredito = ({ value, onChange }) => {
     }
 
     return (
-        <label class="inp" htmlFor="cartaoCreditoReserva">
+        <label className="inp" htmlFor="cartaoCreditoReserva">
             <InputMask
                 id="cartaoCreditoReserva"
                 mask="9999 9999 9999 9999"
                 placeholder='0000 0000 0000 0000'
                 value={value}
                 onChange={handleChange} />
-            <span class="label">Número do cartão</span>
-            <span class="focus-bg"></span>
+            <span className="label">Número do cartão</span>
+            <span className="focus-bg"></span>
         </label>
     )
 }

@@ -16,16 +16,16 @@ const MascaraCEP = ({ value, onChange }) => {
     }
 
     return (
-        <div class="form__group field">
+        <div className="form__group field">
             <InputMask
                 placeholder="Digite somente números"
                 mask="99999-999"
                 required
-                class="form__field"
+                className="form__field"
                 value={value}
                 onChange={handleChange} />
             <label
-                class="form__label"
+                className="form__label"
                 htmlFor="CEP">
                 CEP
             </label>

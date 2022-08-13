@@ -15,14 +15,14 @@ const MascaraCasaReserva = ({ value, onChange }) => {
         })
     }
     return (
-        <label class="inp" htmlFor="casaReserva">
+        <label className="inp" htmlFor="casaReserva">
             <InputMask
                 id="casaReserva"
                 placeholder='2133'
                 value={value}
                 onChange={handleChange} />
-            <span class="label">Casa</span>
-            <span class="focus-bg"></span>
+            <span className="label">Casa</span>
+            <span className="focus-bg"></span>
         </label>
     )
 }

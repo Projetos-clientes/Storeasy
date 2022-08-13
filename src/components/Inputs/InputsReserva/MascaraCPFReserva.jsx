@@ -15,15 +15,15 @@ const MascaraCPFReserva = ({ value, onChange }) => {
         })
     }
     return (
-        <label class="inp" htmlFor="cpfReserva">
+        <label className="inp" htmlFor="cpfReserva">
             <InputMask
                 id="cpfReserva"
                 mask="999.999.999-99"
                 placeholder='123.123.123-12'
                 value={value}
                 onChange={handleChange} />
-            <span class="label">CPF do titular</span>
-            <span class="focus-bg"></span>
+            <span className="label">CPF do titular</span>
+            <span className="focus-bg"></span>
         </label>
     )
 }
