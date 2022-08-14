@@ -4,15 +4,15 @@ import '../InputsMascara.scss'
 
 const MascaraBairro = ({ value, onChange }) => {
     return (
-        <div class="form__group field">
+        <div className="form__group field">
             <InputMask
                 placeholder="Bairro"
                 required
-                class="form__field"
+                className="form__field"
                 value={value}
                 onChange={onChange} />
             <label
-                class="form__label"
+                className="form__label"
                 htmlFor="bairro">
                 Bairro
             </label>

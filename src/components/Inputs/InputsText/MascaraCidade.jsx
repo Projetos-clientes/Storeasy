@@ -15,15 +15,15 @@ const MascaraCidade = ({ value, onChange }) => {
         })
     }
     return (
-        <div class="form__group field">
+        <div className="form__group field">
             <InputMask
                 placeholder="Cidade"
                 required
-                class="form__field"
+                className="form__field"
                 value={value}
                 onChange={handleChange} />
             <label
-                class="form__label"
+                className="form__label"
                 htmlFor="Cidade">
                 Cidade
             </label>

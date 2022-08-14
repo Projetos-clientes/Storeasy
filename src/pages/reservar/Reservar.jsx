@@ -1,7 +1,8 @@
 import React from 'react'
 
-// imposrtando lib de validação dos campos
+// importando lib de validação dos campos
 import validator from 'validator';
+import { isCpf } from 'iscpf'
 
 //elemento importado
 import NavBar from '../../components/navbar/NavBar';
@@ -51,23 +52,38 @@ const Reservar = () => {
     const [numeroReserva, setNumeroReserva] = React.useState("");
 
     //infos endereço
-    const [cep, setCep] = React.useState("");
-    const [casa, setCasa] = React.useState("");
-    const [bairro, setBairro] = React.useState("")
-    const [rua, setRua] = React.useState("")
-    const [complemento, setComplemento] = React.useState("")
-    const [cidade, setCidade] = React.useState("")
-    const [uf, setUf] = React.useState("")
-
+    const [cepReserva, setCepReserva] = React.useState("");
+    const [casaReserva, setCasaReserva] = React.useState("");
+    const [bairroReserva, setBairroReserva] = React.useState("")
+    const [ruaReserva, setRuaReserva] = React.useState("")
+    const [complementoReserva, setComplementoReserva] = React.useState("")
+    const [cidadeReserva, setCidadeReserva] = React.useState("")
+    const [ufReserva, setUfReserva] = React.useState("")
+    
     const handleChange = (event) => {
         setPagamento(event.target.value);
     };
 
+    console.log()
     const reservarLocal = () => {
-        if (validator.isCreditCard(cartaoCredito)){
-            console.log('COMPRA APROVADA')
+        if (
+            validator.isCreditCard(cartaoCredito) &&
+            validator.isMobilePhone(numeroReserva.toString(), 'pt-BR') &&
+            isCpf(cpfReserva) &&
+            !validator.isEmpty(nomeReserva) &&
+            validadeCartao.length === 4 &&
+            cvvCartao.length > 2 &&
+            nomeReserva.length >= 2 &&
+            cepReserva.length === 8 &&
+            casaReserva.length >= 1 &&
+            bairroReserva.length >= 2 &&
+            ruaReserva.length >= 2 &&
+            cidadeReserva.length >= 2 &&
+            ufReserva.length === 2
+        ){
+            console.log('PASSOU')
         } else{
-            console.log('COMPRA REPROVADA')
+            console.log('REPROVOU')
         }
     }
 
@@ -167,26 +183,26 @@ const Reservar = () => {
 
                                     {/* DECLARANDO ENDEREÇO */}
                                     <MascaraCEPReserva 
-                                        value={cep}
-                                        onChange={e => setCep(e.target.value)} />
+                                        value={cepReserva}
+                                        onChange={e => setCepReserva(e.target.value)} />
                                     <MascaraCasaReserva
-                                        value={casa}
-                                        onChange={e => setCasa(e.target.value)} />
+                                        value={casaReserva}
+                                        onChange={e => setCasaReserva(e.target.value)} />
                                     <MascaraBairroReserva 
-                                        value={bairro}
-                                        onChange={e => setBairro(e.target.value)} />
+                                        value={bairroReserva}
+                                        onChange={e => setBairroReserva(e.target.value)} />
                                     <MascaraRuaReserva
-                                        value={rua}
-                                        onChange={e => setRua(e.target.value)} />
+                                        value={ruaReserva}
+                                        onChange={e => setRuaReserva(e.target.value)} />
                                     <MascaraComplementoReserva
-                                        value={complemento}
-                                        onChange={e => setComplemento(e.target.value)} />
+                                        value={complementoReserva}
+                                        onChange={e => setComplementoReserva(e.target.value)} />
                                     <MascaraCidadeReserva
-                                        value={cidade}
-                                        onChange={e => setCidade(e.target.value)} />
+                                        value={cidadeReserva}
+                                        onChange={e => setCidadeReserva(e.target.value)} />
                                     <MascaraUFReserva
-                                        value={uf}
-                                        onChange={e => setUf(e.target.value)} />
+                                        value={ufReserva}
+                                        onChange={e => setUfReserva(e.target.value)} />
                                 </div>
                             </div>
                         }

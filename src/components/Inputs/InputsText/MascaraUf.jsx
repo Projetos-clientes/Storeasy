@@ -15,16 +15,16 @@ const MascaraUf = ({ value, onChange }) => {
         })
     }
     return (
-        <div class="form__group field">
+        <div className="form__group field">
             <InputMask
                 placeholder="UF"
                 mask="aa"
                 required
-                class="form__field ufUppercase"
+                className="form__field ufUppercase"
                 value={value}
                 onChange={handleChange} />
             <label
-                class="form__label"
+                className="form__label"
                 htmlFor="UF">
                 UF
             </label>
