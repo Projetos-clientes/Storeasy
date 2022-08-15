@@ -4,7 +4,7 @@ import '../InputsMascara.scss'
 
 const onlyNumber = (str) => str.replace(/[^0-9]/g, '')
 
-const MascaraCEPReserva = ({ value, onChange }) => {
+const MascaraCEPReserva = ({ value, onChange, classe }) => {
     function handleChange(e) {
         onChange({
             ...e,
@@ -15,7 +15,7 @@ const MascaraCEPReserva = ({ value, onChange }) => {
         })
     }
     return (
-        <label className="inp" htmlFor="cepReserva">
+        <label className={ classe } htmlFor="cepReserva">
             <InputMask
                 id="cepReserva"
                 mask="99999-999"

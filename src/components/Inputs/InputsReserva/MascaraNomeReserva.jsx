@@ -4,7 +4,7 @@ import '../InputsMascara.scss'
 
 const onlyText = (str) => str.replace(/[^a-zA-Z\u00C0-\u00FF " "]/g, '')
 
-const MascaraNomeReserva = ({ value, onChange }) => {
+const MascaraNomeReserva = ({ value, onChange, classe }) => {
     function handleChange(e) {
         onChange({
             ...e,
@@ -15,7 +15,7 @@ const MascaraNomeReserva = ({ value, onChange }) => {
         })
     }
     return (
-        <label className="inp" htmlFor="nomeReserva">
+        <label className={ classe } htmlFor="nomeReserva">
             <InputMask
                 id="nomeReserva"
                 placeholder=" "

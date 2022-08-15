@@ -85,6 +85,15 @@
                     flex-direction: column;
                     width: 100%;
 
+                    .error {
+                        box-shadow: inset 0 -2px 0 red !important;
+                    }
+
+                    .error input:focus {
+                        box-shadow: inset 0 -2px 0 red !important;
+
+                    }
+
                     .pagamentoCredito-cartao {
                         display: flex;
                         margin-bottom: 10px;

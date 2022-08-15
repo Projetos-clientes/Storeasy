@@ -38,6 +38,20 @@ import MascaraCidadeReserva from '../../components/Inputs/InputsReserva/MascaraC
 import MascaraUFReserva from '../../components/Inputs/InputsReserva/MascaraUFReserva';
 
 const Reservar = () => {
+    //Validações
+    const [classeCartao, setClasseCartao] = React.useState("inp")
+    const [classeValidade, setClasseValidade] = React.useState("inp")
+    const [classeCvv, setClasseCvv] = React.useState("inp")
+    const [classeNome, setClasseNome] = React.useState("inp")
+    const [classeCpf, setClasseCpf] = React.useState("inp")
+    const [classeNumero, setClasseNumero] = React.useState("inp")
+    const [classeCep, setClasseCep] = React.useState("inp")
+    const [classeCasa, setClasseCasa] = React.useState("inp")   
+    const [classeBairro, setClasseBairro] = React.useState("inp")    
+    const [classeRua, setClasseRua] = React.useState("inp")    
+    const [classeCidade, setClasseCidade] = React.useState("inp")
+    const [classeUf, setClasseUf] = React.useState("inp")
+    
     //escolha da forma de pagamento
     const [pagamento, setPagamento] = React.useState('CartãoCredito');
 
@@ -64,8 +78,68 @@ const Reservar = () => {
         setPagamento(event.target.value);
     };
 
-    console.log()
+    const valorDaDiaria = 300
+    const valorDaTaxa = ((valorDaDiaria * 20) / 100) * 15
+
+    const campos = [
+        [
+            validator.isCreditCard(cartaoCredito),
+            setClasseCartao
+        ],
+        [
+            validadeCartao.length === 4,
+            setClasseValidade
+        ],
+        [
+            cvvCartao.length > 2,
+            setClasseCvv
+        ],
+        [
+            nomeReserva.length >= 2,
+            setClasseNome
+        ],
+        [
+            isCpf(cpfReserva),
+            setClasseCpf
+        ],
+        [
+            validator.isMobilePhone(numeroReserva.toString(), 'pt-BR'),
+            setClasseNumero
+        ],
+        [
+            cepReserva.length === 8,
+            setClasseCep
+        ],
+        [
+            casaReserva.length >= 1,
+            setClasseCasa
+        ],
+        [
+            bairroReserva.length >= 2,
+            setClasseBairro
+        ],
+        [
+            ruaReserva.length >= 2,
+            setClasseRua
+        ],
+        [
+            cidadeReserva.length >= 2,
+            setClasseCidade
+        ],
+        [
+            ufReserva.length === 2,
+            setClasseUf
+        ]
+    ]
     const reservarLocal = () => {
+        campos.forEach((i) => {
+            if (i[0]) {
+                i[1]("inp")
+            } else {
+                i[1]("inp error")
+            }
+        })
+
         if (
             validator.isCreditCard(cartaoCredito) &&
             validator.isMobilePhone(numeroReserva.toString(), 'pt-BR') &&
@@ -158,49 +232,61 @@ const Reservar = () => {
                             <div className='pagamentoCredito'>
                                 <div className='pagamentoCredito-cartao'>
                                     <MascaraCartaoCredito
+                                        classe={classeCartao}
                                         value={cartaoCredito}
                                         onChange={e => setCartaoCredito(e.target.value)} />
                                 </div>
                                 <div style={{ display: 'flex', gap: '10px' }}>
                                     <MascaraValidadeCartao
+                                        classe={classeValidade}
                                         value={validadeCartao}
                                         onChange={e => setValidadeCartao(e.target.value)} />
                                     <MascaraCVVCartao
+                                        classe={classeCvv}
                                         value={cvvCartao}
                                         onChange={e => setCvvCartao(e.target.value)} />
                                 </div>
                                 <h2>Informações do titular do cartão</h2>
                                 <div className="pagamentoCredito-Nome">
                                     <MascaraNomeReserva
+                                        classe={classeNome}
                                         value={nomeReserva}
                                         onChange={e => setNomeReserva(e.target.value)} />
                                     <MascaraCPFReserva
+                                        classe={classeCpf}
                                         value={cpfReserva}
                                         onChange={e => setCpfReserva(e.target.value)} />
-                                    <MascaraNumeroReserva 
+                                    <MascaraNumeroReserva
+                                        classe={classeNumero}
                                         value={numeroReserva}
                                         onChange={e => setNumeroReserva(e.target.value)} />
 
                                     {/* DECLARANDO ENDEREÇO */}
                                     <MascaraCEPReserva 
+                                        classe={classeCep}
                                         value={cepReserva}
                                         onChange={e => setCepReserva(e.target.value)} />
                                     <MascaraCasaReserva
+                                        classe={classeCasa}
                                         value={casaReserva}
                                         onChange={e => setCasaReserva(e.target.value)} />
                                     <MascaraBairroReserva 
+                                        classe={classeBairro}
                                         value={bairroReserva}
                                         onChange={e => setBairroReserva(e.target.value)} />
                                     <MascaraRuaReserva
+                                        classe={classeRua}
                                         value={ruaReserva}
                                         onChange={e => setRuaReserva(e.target.value)} />
                                     <MascaraComplementoReserva
                                         value={complementoReserva}
                                         onChange={e => setComplementoReserva(e.target.value)} />
                                     <MascaraCidadeReserva
+                                        classe={classeCidade}
                                         value={cidadeReserva}
                                         onChange={e => setCidadeReserva(e.target.value)} />
                                     <MascaraUFReserva
+                                        classe={classeUf}
                                         value={ufReserva}
                                         onChange={e => setUfReserva(e.target.value)} />
                                 </div>
@@ -220,17 +306,17 @@ const Reservar = () => {
                     <div className="reserva-card-infos">
                         <h2>Informações de valores</h2>
                         <div className='card-infos-valor'>
-                            <span>R$ 320,00 x 20 dias</span>
-                            <span>R$ 6.400,00</span>
+                            <span>R$ {valorDaDiaria},00 x 20 dias</span>
+                            <span>R$ {valorDaDiaria * 20},000</span>
                         </div>
                         <div className='card-infos-taxa'>
                             <span>Taxa de serviço</span>
-                            <span>R$ 30,00</span>
+                            <span>R$ {valorDaTaxa}</span>
                         </div>
                         <hr />
                         <div className='card-infos-total'>
                             <span>Total</span>
-                            <span>R$ 6.430,00</span>
+                            <span>R$ {valorDaTaxa + valorDaDiaria * 20},00</span>
                         </div>
                     </div>
                     <button className="btn-reservar" onClick={reservarLocal}>

@@ -2,7 +2,7 @@ import React from 'react'
 import InputMask from 'react-input-mask'
 import '../InputsMascara.scss'
 
-const MascaraBairroReserva = ({ value, onChange }) => {
+const MascaraBairroReserva = ({ value, onChange, classe}) => {
     function handleChange(e) {
         onChange({
             ...e,
@@ -12,7 +12,7 @@ const MascaraBairroReserva = ({ value, onChange }) => {
         })
     }
     return (
-        <label className="inp" htmlFor="bairroReserva">
+        <label className={ classe } htmlFor="bairroReserva">
             <InputMask
                 id="bairroReserva"
                 placeholder="Grajaú"

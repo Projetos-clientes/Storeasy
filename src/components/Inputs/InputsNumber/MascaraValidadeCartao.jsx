@@ -4,7 +4,7 @@ import '../InputsMascara.scss'
 
 const onlyNumber = (str) => str.replace(/[^0-9]/g, '')
 
-const MascaraValidadeCartao = ({ value, onChange }) => {
+const MascaraValidadeCartao = ({ value, onChange, classe}) => {
     function handleChange(e) {
         onChange({
             ...e,
@@ -16,7 +16,7 @@ const MascaraValidadeCartao = ({ value, onChange }) => {
     }
 
     return (
-        <label className="inp" htmlFor="validadeCartaoReserva">
+        <label className={ classe } htmlFor="validadeCartaoReserva">
             <InputMask
                 id="validadeCartaoReserva"
                 mask="99/99"
