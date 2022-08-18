@@ -45,7 +45,7 @@
         "validator": "^13.7.0",
         "web-vitals": "^2.1.4"
     },
-    "homepage": "https://klebervini.tech/storeasy",
+    "homepage": "https://klebervini49.github.io/storeasy",
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
