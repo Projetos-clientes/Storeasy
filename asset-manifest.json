@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/storeasy/static/css/main.a7a6feed.css",
-    "main.js": "/storeasy/static/js/main.fb31e36b.js",
+    "main.js": "/storeasy/static/js/main.e76efda9.js",
     "static/media/background.png": "/storeasy/static/media/background.851aae2ee1ad59cb67f4.png",
     "static/media/garagemstore01.png": "/storeasy/static/media/garagemstore01.1a683f74c0deaeed5613.png",
     "static/media/quartinho.png": "/storeasy/static/media/quartinho.317247eef5973acc1ffe.png",
@@ -25,10 +25,10 @@
     "static/media/extintor.png": "/storeasy/static/media/extintor.8104404d67e0054040b7.png",
     "index.html": "/storeasy/index.html",
     "main.a7a6feed.css.map": "/storeasy/static/css/main.a7a6feed.css.map",
-    "main.fb31e36b.js.map": "/storeasy/static/js/main.fb31e36b.js.map"
+    "main.e76efda9.js.map": "/storeasy/static/js/main.e76efda9.js.map"
   },
   "entrypoints": [
     "static/css/main.a7a6feed.css",
-    "static/js/main.fb31e36b.js"
+    "static/js/main.e76efda9.js"
   ]
 }
