@@ -81,8 +81,7 @@ const Reservar = () => {
     const valorDaDiaria = 300
     const valorDaTaxa = ((valorDaDiaria * 20) / 100) * 15
 
-    const campos = [
-        [
+    const campos = [[
             validator.isCreditCard(cartaoCredito),
             setClasseCartao
         ],
